@@ -1,47 +1,36 @@
-import React, { useRef, useEffect } from "react";
-import { View, Image, Animated } from "react-native";
-import { estilos } from "./loadingcss"; // Importa o estilo
+import React, { useState, useEffect } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Loading from "./loading"; // Componente de Loading ou SplashScreen
 
-export default function Index() {
-    const rotateValue = new Animated.Value(0); // Para rotação
-  const opacityValue = new Animated.Value(0); // Para opacidade
+import Home from "./home";
 
-    useEffect(() => {
-        // Inicia as animações
-        Animated.loop(
-          Animated.parallel([
-            // Animação de rotação
-            Animated.timing(rotateValue, {
-              toValue: -2,
-              duration: 30000, // 3 segundos para uma rotação completa
-              useNativeDriver: true, // Habilita o uso do driver nativo para performance
-            }),
-            // Animação de fade in (transição de opacidade)
-            Animated.timing(opacityValue, {
-              toValue: 1,
-              duration: 7000, // Fade in gradual durante a rotação
-              useNativeDriver: true, // Habilita o uso do driver nativo
-            })
-          ])
-        ).start(); // Inicia a animação em loop
-      }, []);
-    
-      // Interpolando valores
-      const rotate = rotateValue.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['0deg', '360deg'], // Rotaciona de 0 a 360 graus
-      });
+const Stack = createStackNavigator();
 
-    // Converte o valor da animação em graus
-    const rotation = rotateValue.interpolate({
-        inputRange: [0, 1],
-        outputRange: ["0deg", "360deg"],
-    });
+const App = () => {
 
-    return (        
-            <Animated.Image
-                style={[estilos.logo, { transform: [{ rotate: rotation }], opacity: opacityValue }]}
-                source={require("./quasar.png")}
-            />        
-    );
-}
+  const [showLoading, setShowLoading] = useState(true); // Controla a exibição da SplashScreen
+
+  useEffect(() => {
+    // Após 3 segundos, muda o estado para false, permitindo que a Home seja exibida
+    const timer = setTimeout(() => {
+      setShowLoading(false); // Esconde o SplashScreen e exibe a Home
+    }, 3000);
+
+    // Limpeza do timeout se o componente for desmontado antes de completar o tempo
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Mostra a tela de SplashScreen (Loading) enquanto showLoading é true
+  if (showLoading) {
+    return <Loading />;
+  }
+
+  return (
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>    
+  );
+};
+
+export default App;
