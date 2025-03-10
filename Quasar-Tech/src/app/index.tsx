@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Loading from "./loading"; // Componente de Loading ou SplashScreen
 
 import Home from "./home";
+import Curso from "./componentes/curso";
 
 const Stack = createStackNavigator();
 
@@ -22,13 +23,14 @@ const App = () => {
   }, []);
 
   // Mostra a tela de SplashScreen (Loading) enquanto showLoading é true
-  if (showLoading) {
+  if (false) {
     return <Loading />;
   }
 
   return (
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Curso" component={Curso} />
       </Stack.Navigator>    
   );
 };

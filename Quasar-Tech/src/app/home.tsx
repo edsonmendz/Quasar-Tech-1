@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
-import Button from "../componentes/botao";
+import Button from "./componentes/botao";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Route } from "expo-router";
+import { Link, Route } from "expo-router";
 
 const Home = () => {  
 
@@ -12,10 +12,18 @@ const Home = () => {
       <Text style={{ fontSize: 35, marginBottom:30 }}>🏠 Escolha a matéria</Text>
 
       <View style={{paddingHorizontal:"8%"}}>
-        <Button title={"Transporte de Produtos Perigosos - TPP"} />
-        <Button title={"Transporte de Cargas Indivisíveis - TCI"} />
-        <Button title={"Curso de Transporte de Passageiros - CTP"} />
-        <Button title={"Curso de Transporte Escolar - CTE"} />
+        <Link href="/curso" asChild>
+          <Button title="Transporte de Produtos Perigosos - TPP" />
+        </Link>
+        <Link href="/curso" asChild>
+          <Button title={"Transporte de Cargas Indivisíveis - TCI"} />
+        </Link>
+        <Link href="/curso" asChild>
+          <Button title={"Curso de Transporte de Passageiros - CTP"}/>
+        </Link>
+        <Link href="/curso" asChild>
+          <Button title={"Curso de Transporte Escolar - CTE"}/>
+        </Link>  
       </View>
       
     </View>

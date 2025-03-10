@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { TouchableOpacity, Text, StyleSheet, GestureResponderEvent } from "react-native";
 
 import estilos from "./botaocss";
@@ -6,7 +6,7 @@ import estilos from "./botaocss";
 // Tipagem das props do botão
 interface ButtonProps {
   title: string; // Texto a ser exibido no botão
-  onPress: (event: GestureResponderEvent) => void; // Função que será chamada ao pressionar o botão
+  onPress?: () => void; // Agora é opcional
   style?: object; // Estilo adicional que pode ser passado (opcional)
 }
 
