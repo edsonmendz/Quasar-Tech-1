@@ -13,8 +13,8 @@ const Button = forwardRef<typeof TouchableOpacity, ButtonProps>((props, ref) => 
   const { title, onPress, style } = props; // Desestruturação correta
 
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.button, estilos.botaoNormal, style]}>
-      <Text style={estilos.textoNormal}>{title}</Text>
+    <TouchableOpacity onPress={onPress} style={[styles.button, estilos.esperando, style]}>
+      <Text style={estilos.fonte1em}>{title}</Text>
     </TouchableOpacity>
   );
 });
