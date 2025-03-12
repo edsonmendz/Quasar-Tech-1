@@ -1,22 +1,23 @@
 import React, { forwardRef } from "react";
-import { TouchableOpacity, Text, StyleSheet, GestureResponderEvent } from "react-native";
+import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps } from "react-native";
 
 import estilos from "./botaocss";
 
 // Tipagem das props do botão
-interface ButtonProps {
-  title: string; // Texto a ser exibido no botão
-  onPress?: () => void; // Agora é opcional
-  style?: object; // Estilo adicional que pode ser passado (opcional)
+// Tipagem das props do botão
+interface ButtonProps extends TouchableOpacityProps {
+  title: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, onPress, style }) => {
+const Button = forwardRef<typeof TouchableOpacity, ButtonProps>((props, ref) => {
+  const { title, onPress, style } = props; // Desestruturação correta
+
   return (
-    <TouchableOpacity onPress={onPress} style={[ styles.button, estilos.botaoNormal,  style]}>
+    <TouchableOpacity onPress={onPress} style={[styles.button, estilos.botaoNormal, style]}>
       <Text style={estilos.textoNormal}>{title}</Text>
     </TouchableOpacity>
   );
-};
+});
 
 // Estilos do botão
 const styles = StyleSheet.create({
