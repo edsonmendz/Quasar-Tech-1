@@ -3,10 +3,16 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import questoes from './questoesTpp';
 import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
+import { useRoute } from "@react-navigation/native";
 
+interface PerguntasProps {
+    materiaEscolhida?: string;  // Tornando a prop opcional e do tipo string
+  }
 
+  
 
-function Perguntas() {    
+  function Perguntas({ materiaEscolhida }: PerguntasProps) {
+    
     
 
     // Contador da pergunta atual

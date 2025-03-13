@@ -7,6 +7,7 @@ import estilos from "./botaocss";
 // Tipagem das props do botão
 interface ButtonProps extends TouchableOpacityProps {
   title: string;
+  materiaEscolhida?: string;
 }
 
 const Button = forwardRef<typeof TouchableOpacity, ButtonProps>((props, ref) => {

@@ -13,16 +13,16 @@ const Home = () => {
 
       <View style={{paddingHorizontal:"8%"}}>
         <Link href="/Perguntas" asChild>
-          <Button title="Transporte de Produtos Perigosos - TPP" />
+          <Button title="Transporte de Produtos Perigosos - TPP" materiaEscolhida={"tpp"} />
         </Link>
         <Link href="/Perguntas" asChild>
-          <Button title={"Transporte de Cargas Indivisíveis - TCI"} />
+          <Button title={"Transporte de Cargas Indivisíveis - TCI"} materiaEscolhida={"tci"} />
         </Link>
         <Link href="/Perguntas" asChild>
-          <Button title={"Curso de Transporte de Passageiros - CTP"}/>
+          <Button title={"Curso de Transporte de Passageiros - CTP"} materiaEscolhida={"ctp"} />
         </Link>
         <Link href="/Perguntas" asChild>
-          <Button title={"Curso de Transporte Escolar - CTE"}/>
+          <Button title={"Curso de Transporte Escolar - CTE"} materiaEscolhida={"cte"} />
         </Link>  
       </View>
       
