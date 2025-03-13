@@ -8,9 +8,9 @@ interface PerguntaProps {
     perguntaAnterior: () => void;  // Função que retorna void
     proximaPergunta: () => void;   // Função que retorna void
     finalizar: () => void;         // Função que retorna void
-    pergunta: number[];              // Texto da pergunta
-    resposta: number[];            // Array de strings contendo as respostas possíveis
-    responder: boolean; // Função que recebe um número e retorna void
+    pergunta: string[];              // Texto da pergunta
+    resposta: any;       // Array de strings contendo as respostas possíveis
+    responder: (respostaSelecionada: number) => void; // Função que recebe um número e retorna void
     cartaoResposta: number[];      // Array de números representando respostas dadas
     conferirRespostas: boolean;    // Indica se está no modo de conferir respostas
     ordemRespostas: number[][];    // Matriz para armazenar a ordem das respostas
@@ -22,7 +22,7 @@ function Pergunta({
     proximaPergunta, 
     finalizar, 
     pergunta, 
-    resposta, 
+    resposta,
     responder, 
     cartaoResposta, 
     conferirRespostas, 

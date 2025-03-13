@@ -4,7 +4,10 @@ import questoes from './questoesTpp';
 import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
 
+
+
 function Perguntas() {    
+    
 
     // Contador da pergunta atual
     const [perguntaAtual, setPerguntaAtual] = useState(0);
