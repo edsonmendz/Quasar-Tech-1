@@ -12,16 +12,16 @@ const Home = () => {
       <Text style={{ fontSize: 35, marginBottom:30 }}>🏠 Escolha a matéria</Text>
 
       <View style={{paddingHorizontal:"8%"}}>
-        <Link href="/curso" asChild>
+        <Link href="/Perguntas" asChild>
           <Button title="Transporte de Produtos Perigosos - TPP" />
         </Link>
-        <Link href="/curso" asChild>
+        <Link href="/Perguntas" asChild>
           <Button title={"Transporte de Cargas Indivisíveis - TCI"} />
         </Link>
-        <Link href="/curso" asChild>
+        <Link href="/Perguntas" asChild>
           <Button title={"Curso de Transporte de Passageiros - CTP"}/>
         </Link>
-        <Link href="/curso" asChild>
+        <Link href="/Perguntas" asChild>
           <Button title={"Curso de Transporte Escolar - CTE"}/>
         </Link>  
       </View>

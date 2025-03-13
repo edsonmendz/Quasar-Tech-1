@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Resposta from './Resposta';
-import Botao from './componentes/botao';
+import Button from './componentes/botao';
 
 function Pergunta({ 
     perguntaAtual, 
@@ -46,9 +46,9 @@ function Pergunta({
             </View>
 
             <View style={styles.botoesContainer}>
-                <Botao text="Voltar" ativar={perguntaAnterior} />
-                <Botao text="Encerrar" ativar={finalizar} />
-                <Botao text="Próximo" ativar={proximaPergunta} />
+                <Button title="Voltar" onPress={perguntaAnterior} />
+                <Button title="Encerrar" onPress={finalizar} />
+                <Button title="Próximo" onPress={proximaPergunta} />
             </View>
         </View>
     );

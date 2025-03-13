@@ -29,7 +29,7 @@ const Finalizar: React.FC<FinalizarProps> = ({ Concluir, Conferir, conferirRespo
                         Você acertou: {quantidadeAcertos} pergunta{quantidadeAcertos !== 1 ? 's' : ''}
                     </Text>
                     <Botao title="Conferir Respostas" onPress={Conferir} />
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.botao}>
+                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.botao}>
                         <Text style={styles.textoBotao}>Página Inicial</Text>
                     </TouchableOpacity>
                 </View>
