@@ -29,7 +29,7 @@ function Resposta({ letra, resposta, responder, num, cartaoResposta, perguntaAtu
     return (                   
         <TouchableOpacity 
             onPress={() => responder(num)}
-            style={[classe, estilos.largura100, estilos.margemVertical]}
+            style={[ estilos.esperando, classe, estilos.largura100, estilos.margemVertical]}
         >   
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Text style={{ fontWeight: 'bold', marginRight: 5 }}>{letra}</Text>
