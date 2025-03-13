@@ -3,6 +3,19 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Resposta from './Resposta';
 import Button from './componentes/botao';
 
+interface PerguntaProps {
+    perguntaAtual: number;         // Índice da pergunta atual (assumindo que é um número)
+    perguntaAnterior: () => void;  // Função que retorna void
+    proximaPergunta: () => void;   // Função que retorna void
+    finalizar: () => void;         // Função que retorna void
+    pergunta: number[];              // Texto da pergunta
+    resposta: number[];            // Array de strings contendo as respostas possíveis
+    responder: boolean; // Função que recebe um número e retorna void
+    cartaoResposta: number[];      // Array de números representando respostas dadas
+    conferirRespostas: boolean;    // Indica se está no modo de conferir respostas
+    ordemRespostas: number[][];    // Matriz para armazenar a ordem das respostas
+}
+
 function Pergunta({ 
     perguntaAtual, 
     perguntaAnterior, 
@@ -14,11 +27,14 @@ function Pergunta({
     cartaoResposta, 
     conferirRespostas, 
     ordemRespostas 
-}) { 
+}: PerguntaProps)
+
+{     
+
     return (
         <View style={styles.container}>
             <Text style={styles.pergunta}>
-                <Text style={styles.perguntaNumero}>{perguntaAtual + 1}) </Text>
+                <Text style={styles.perguntaNumero}>{perguntaAtual + 1} </Text>
                 {pergunta[0]}
             </Text>
 

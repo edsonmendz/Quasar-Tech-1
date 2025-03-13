@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Botao from './componentes/botao';
+import Button from './componentes/botao';
+import estilos from './componentes/botaocss';
 
 interface FinalizarProps {
     Concluir: () => void;
@@ -20,17 +21,17 @@ const Finalizar: React.FC<FinalizarProps> = ({ Concluir, Conferir, conferirRespo
             {!conferirRespostas ? (
                 <View>
                     <Text style={styles.textoPergunta}>Tem certeza de que deseja finalizar o simulado?</Text>
-                    <Botao title="Concluir" onPress={Concluir} />
-                    <Botao title="Voltar" onPress={finalizar} />
+                    <Button title="Concluir" onPress={Concluir} />
+                    <Button title="Voltar" onPress={finalizar} />
                 </View>
             ) : (
                 <View>
                     <Text style={styles.resultado}>
                         Você acertou: {quantidadeAcertos} pergunta{quantidadeAcertos !== 1 ? 's' : ''}
                     </Text>
-                    <Botao title="Conferir Respostas" onPress={Conferir} />
-                    <TouchableOpacity onPress={() => navigation.goBack()} style={styles.botao}>
-                        <Text style={styles.textoBotao}>Página Inicial</Text>
+                    <Button title="Conferir Respostas" onPress={Conferir} />
+                    <TouchableOpacity >
+                        <Button onPress={() => navigation.goBack()} title='Página inicial' />
                     </TouchableOpacity>
                 </View>
             )}
