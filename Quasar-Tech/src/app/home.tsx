@@ -12,16 +12,16 @@ const Home = () => {
       <Text style={{ fontSize: 35, marginBottom:30 }}>🏠 Escolha a matéria</Text>
 
       <View style={{paddingHorizontal:"8%"}}>
-        <Link href={{ pathname: "/Perguntas", params: { materia: "Tpp" } }}  asChild>
+        <Link href={{ pathname: "/Perguntas", params: { nomeArquivo: "Tpp" } }}  asChild>
           <Button title="Transporte de Produtos Perigosos - TPP" />
         </Link>
-        <Link href={{ pathname: "/Perguntas", params: { materia: "Tci" }  }} asChild>
+        <Link href={{ pathname: "/Perguntas", params: { nomeArquivo: "Tci" }  }} asChild>
           <Button title={"Transporte de Cargas Indivisíveis - TCI"} />
         </Link>
-        <Link href={{ pathname: "/Perguntas", params: { materia: "Ctp" } }} asChild>
+        <Link href={{ pathname: "/Perguntas", params: { nomeArquivo: "Ctp" } }} asChild>
           <Button title={"Curso de Transporte de Passageiros - CTP"} />
         </Link>
-        <Link href={{ pathname: "/Perguntas", params: { materia: "Cte" } }} asChild>
+        <Link href={{ pathname: "/Perguntas", params: { nomeArquivo: "Cte" } }} asChild>
           <Button title={"Curso de Transporte Escolar - CTE"} />
         </Link>  
       </View>

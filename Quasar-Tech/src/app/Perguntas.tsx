@@ -1,59 +1,20 @@
 import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import questoes from './questoesTpp';
 import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
-import { useRoute } from "@react-navigation/native";
-import { useLocalSearchParams } from "expo-router"; // Certifique-se de importar corretamente
+
 
 interface PerguntasProps {
     materiaEscolhida?: string;  // Tornando a prop opcional e do tipo string
-  }
+    nomeArquivo?:string
+  }    
 
-  
+  function Perguntas({ materiaEscolhida, nomeArquivo }: PerguntasProps) {    
 
-  function Perguntas({ materiaEscolhida }: PerguntasProps) {
+    // Área de testes
+    const questoes = require('./questoesTpp');
+    //
 
-    const { materia } = useLocalSearchParams();
-    const [questoes, setQuestoes] = useState<any[]>([]);
-    console.log(materia)
-    useEffect(() => {
-        if (!materia) return;
-    
-        const carregarQuestoes = async () => {
-          try {
-            let modulo: { default: any[] };
-            console.log(materia)
-    
-            switch (materia) {
-              case "Tpp":
-                modulo = await import("./questoesTpp");
-                break;
-              case "Tci":
-                modulo = await import("./questoesTci");
-                break;
-              case "Ctp":
-                modulo = await import("./questoesTpp");
-                break;
-              case "Cte":
-                modulo = await import("./questoesTpp");
-                break;
-              default:
-                modulo = { default: [] };
-                break;
-            }
-    
-            setQuestoes(modulo.default);
-          } catch (error) {
-            console.error("Erro ao carregar questões:", error);
-            setQuestoes([]); // Se houver erro, define como lista vazia
-          }
-        };
-    
-        carregarQuestoes();
-      }, [materia]);
-    
-    
 
     // Contador da pergunta atual
     const [perguntaAtual, setPerguntaAtual] = useState(0);
@@ -63,8 +24,9 @@ interface PerguntasProps {
     const [quantidadeAcertos, setQuantidadeAcertos] = useState(0); 
     const [finalizou, setFinalizou] = useState(false);
     const [conferirRespostas, setConferirRespostas] = useState(false);
-
     const maximoPerguntas = 10;
+
+    
 
     // Alterar a pergunta atual
     function proximaPergunta() {
