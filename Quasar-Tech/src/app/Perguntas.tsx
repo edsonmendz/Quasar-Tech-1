@@ -2,17 +2,23 @@ import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
-
+import { useRoute } from "@react-navigation/native";
+//import questoes from "./questoesTpp"
 
 interface PerguntasProps {
     materiaEscolhida?: string;  // Tornando a prop opcional e do tipo string
     nomeArquivo?:string
   }    
 
-  function Perguntas({ materiaEscolhida, nomeArquivo }: PerguntasProps) {    
+  function Perguntas({ materiaEscolhida }: PerguntasProps) { 
+    const route = useRoute();
+    const { nomeArquivo } = route.params as { nomeArquivo: string };   
+
+    const [questoes, SetQuestoes] = useState([]);  
+
 
     // Área de testes
-    const questoes = require('./questoesTpp');
+       
     //
 
 
@@ -37,11 +43,7 @@ interface PerguntasProps {
         setPerguntaAtual((perguntaAtual - 1 + maximoPerguntas) % maximoPerguntas);
     }
     
-    // Sortear perguntas
-    useEffect(() => {
-        setPerguntasSorteadas(randomizarPerguntas());
-    }, []);
-
+    
     function randomizarPerguntas() {        
         const sorteadas: number[] = [];
         while (sorteadas.length < maximoPerguntas) {
@@ -52,6 +54,31 @@ interface PerguntasProps {
         }
         return sorteadas;
     }
+
+    // Sortear perguntas
+    useEffect(() => {              
+        if (!nomeArquivo) return; // Evita execução desnecessária caso a prop esteja vazia
+
+        let dados;
+        switch (nomeArquivo) {
+            case "Tpp":
+                dados = require('./questoesTpp').default;                
+                break;
+            case "Tci":
+                dados = require('./questoesTci').default;
+                break;
+            default:
+                console.warn("Arquivo de questões não encontrado para:", nomeArquivo);
+                return;
+        }
+        SetQuestoes(dados);
+    }, [nomeArquivo]);
+
+    useEffect(() => {
+        if (questoes.length > 0) { // Garante que só roda quando 'questoes' foi realmente atualizado
+            setPerguntasSorteadas(randomizarPerguntas());
+        }
+    }, [questoes]); // Executa quando 'questoes' for atualizado
 
     // Exibir a pergunta atual
     const perguntaAtualSorteada = perguntasSorteadas.length > 0 ? perguntasSorteadas[perguntaAtual] : null;
