@@ -23,7 +23,10 @@ const Home = () => {
         </Link>
         <Link href={{ pathname: "/Perguntas", params: { nomeArquivo: "Cte" } }} asChild>
           <Button title={"Curso de Transporte Escolar - CTE"} />
-        </Link>  
+        </Link>
+        <Link href={{ pathname: "/Perguntas", params: { nomeArquivo: "Socorrista" } }} asChild>
+          <Button title={"Socorrista"} />
+        </Link> 
       </View>
       
     </View>

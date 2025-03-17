@@ -67,6 +67,15 @@ interface PerguntasProps {
             case "Tci":
                 dados = require('./questoesTci').default;
                 break;
+            case "Ctp":
+                dados = require('./questoesCtp').default;                
+                break;
+            case "Cte":
+                dados = require('./questoesCte').default;
+                break;
+            case "Socorrista":
+                dados = require('./questoesSocorrista').default;
+                break;
             default:
                 console.warn("Arquivo de questões não encontrado para:", nomeArquivo);
                 return;
