@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { View, StyleSheet, SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import Loading from "./loading"; // Componente de Loading ou SplashScreen
 
+import TopBar from './TopBar';
+import SideBar from './SideBar';
 import Home from "./home";
-import Curso from "./componentes/curso";
 
 const Stack = createStackNavigator();
 
-const App = () => {
+const App = () => { 
 
   const [showLoading, setShowLoading] = useState(true); // Controla a exibição da SplashScreen
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Controle da sidebar
+
+  const openMenu = () => setIsMenuOpen(true);
+  const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
     // Após 3 segundos, muda o estado para false, permitindo que a Home seja exibida
@@ -28,11 +35,27 @@ const App = () => {
   }
 
   return (
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Curso" component={Curso} />
-      </Stack.Navigator>    
+      <SafeAreaView style={{ flex: 1 }}>
+        {/* Exibindo a Sidebar se o menu estiver aberto */}
+        {isMenuOpen && <SideBar closeMenu={closeMenu} />}
+
+        <View style={styles.container}>
+          {/* Exibindo a TopBar */}
+          <TopBar openMenu={openMenu} />
+
+          {/* Stack de navegação */}
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </View>
+      </SafeAreaView>   
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default App;
