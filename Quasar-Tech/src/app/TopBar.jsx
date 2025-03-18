@@ -5,19 +5,19 @@ import Icon from 'react-native-vector-icons/Feather';
 const TopBar = ({ openMenu }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={openMenu}>
+      <TouchableOpacity style={styles.hamburguer} onPress={openMenu}>
         <Icon name="menu" size={30} color="#fff" />
       </TouchableOpacity>
-      <Text style={styles.title}>Meu App</Text>
+      <Text style={styles.title}>Estudos Específicos</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    height: '9%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     backgroundColor: '#6200ee',
     padding: 15,
   },
@@ -25,7 +25,13 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 20,
     fontWeight: 'bold',
+    margin: 'auto'
   },
+  hamburguer: {
+    maxWidth: '10%',
+    float: 'left',
+  }
+  
 });
 
 export default TopBar;
