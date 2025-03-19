@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import MyCheckbox from './componentes/MyCheckbox'
 
 const Sidebar = ({ closeMenu }) => {
   const slideAnim = useRef(new Animated.Value(-300)).current; // Posição inicial da sidebar
@@ -27,6 +28,7 @@ const Sidebar = ({ closeMenu }) => {
       <View style={styles.menu}>
         <TouchableOpacity>
           <Text style={[styles.opcao, styles.botaoPreto]}>Option 1</Text>
+          <MyCheckbox></MyCheckbox>
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={[styles.opcao, styles.botaoPreto]}>Option 2</Text>
