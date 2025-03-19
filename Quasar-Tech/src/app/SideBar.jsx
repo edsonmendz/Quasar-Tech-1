@@ -26,10 +26,12 @@ const Sidebar = ({ closeMenu }) => {
         </TouchableOpacity>
       </View>      
       <View style={styles.menu}>
-        <TouchableOpacity>
-          <Text style={[styles.opcao, styles.botaoPreto]}>Option 1</Text>
-          <MyCheckbox></MyCheckbox>
-        </TouchableOpacity>
+        <View style={styles.flexRow}>
+          <Text style={[styles.opcao, styles.botaoPreto]}>Perguntas: </Text>          
+          <MyCheckbox number={10} />          
+          <MyCheckbox  number={20} />          
+          <MyCheckbox  number={30} />
+        </View>    
         <TouchableOpacity>
           <Text style={[styles.opcao, styles.botaoPreto]}>Option 2</Text>
         </TouchableOpacity>
@@ -61,12 +63,14 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 25,
   },
+  tamanho10: {
+    fontSize: 10
+  },
   opcao: {    
     marginVertical: 15,
   },
   hamburguer: {   
-    fontSize: 25,
-    flexDirection: 'row',
+    fontSize: 25,    
     display: 'flex',
     justifyContent: 'space-between',
     backgroundColor: '#6200ee',
@@ -82,6 +86,11 @@ const styles = StyleSheet.create({
   flutuar: {
     float: 'right',
     marginX: 'auto'
+  },
+  flexRow: {
+    flexDirection: 'row', 
+    alignItems: 'center',
+    justifyContent: 'space-between',
   }
 });
 
