@@ -66,16 +66,16 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <Text style={[styles.opcao, styles.botaoPreto]}>Contato e Sugestões</Text>
         </TouchableOpacity>
         <View style={styles.links}>
-          <TouchableOpacity onPress={() => openURL("mailto:seuemail@gmail.com")}>
-            <Awesome name="envelope" size={30} color="#fff" style={styles.botaoPreto} />
+          <TouchableOpacity onPress={() => openURL("mailto:edsonmendesfullstack@gmail.com")}>
+            <Awesome name="envelope" size={30} color="#fff" style={styles.LinkVermelho} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => openURL("https://github.com/seuusuario")}>
-            <Awesome name="github" size={30} color="#fff" style={styles.botaoPreto} />
+          <TouchableOpacity onPress={() => openURL("https://github.com/edsonmendz")}>
+            <Awesome name="github" size={30} color="#fff" style={styles.linkPreto} />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => openURL("https://linkedin.com/in/seuperfil")}>
-            <Awesome name="linkedin" size={30} color="#fff" style={styles.botaoPreto} />
+          <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
+            <Awesome name="linkedin" size={30} color="#fff" style={styles.linkAzul} />
           </TouchableOpacity>
         </View>
       </View>
@@ -128,10 +128,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   links: {
+    marginTop: '6%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-  }
+  },
+  linkPreto: {
+    fontSize: 30,
+    color: '#000',
+  },
+  linkAzul: {    
+      fontSize: 30,
+      color: '#00f',
+  },
+  LinkVermelho: {
+    fontSize: 30,
+    color: '#f00',
+  }    
 });
 
 export default Sidebar;
