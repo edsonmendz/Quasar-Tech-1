@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const MyCheckbox = ({ number }) => {
-  const [checked, setChecked] = useState(false);
+interface MyCheckboxProps {
+  number: number;
+  isChecked: boolean;
+  onPress: () => void;
+}
 
+const MyCheckbox: React.FC<MyCheckboxProps> = ({ number, isChecked, onPress }) => {
   return (
     <TouchableOpacity
-      style={[styles.checkbox, checked ? styles.checked : styles.unchecked]}
-      onPress={() => setChecked(!checked)}
+      style={[styles.checkbox, isChecked ? styles.checked : styles.unchecked]}
+      onPress={onPress}
     >
-      <Text style={[styles.number, checked ? styles.checkedText : styles.uncheckedText]}>
+      <Text style={[styles.number, isChecked ? styles.checkedText : styles.uncheckedText]}>
         {number}
       </Text>
     </TouchableOpacity>
@@ -21,7 +25,7 @@ const styles = StyleSheet.create({
     width: 27, // Tamanho pequeno
     height: 25,
     borderWidth: 2,
-    borderRadius: 2,
+    borderRadius: 4,
     alignItems: 'center',
     justifyContent: 'center',
   },

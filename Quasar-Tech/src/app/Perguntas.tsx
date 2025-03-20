@@ -2,25 +2,17 @@ import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
-import { useRoute } from "@react-navigation/native";
-//import questoes from "./questoesTpp"
+import { RouteProp, useRoute } from '@react-navigation/native';
+import { RootStackParamList } from './rotas/types';
 
-interface PerguntasProps {
-    materiaEscolhida?: string;  // Tornando a prop opcional e do tipo string
-    nomeArquivo?:string
-  }    
+type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
 
-  function Perguntas({ materiaEscolhida }: PerguntasProps) { 
-    const route = useRoute();
-    const { nomeArquivo } = route.params as { nomeArquivo: string };   
+  const Perguntas: React.FC = () => {
+    const route = useRoute<PerguntasRouteProp>();
+    const { nomeArquivo, maximoPerguntas } = route.params; // Obtendo o maximoPerguntas
+    const perguntasMax = maximoPerguntas !== undefined ? maximoPerguntas : 10;  // Define 10 como valor padrão
 
-    const [questoes, SetQuestoes] = useState([]);  
-
-
-    // Área de testes
        
-    //
-
 
     // Contador da pergunta atual
     const [perguntaAtual, setPerguntaAtual] = useState(0);
@@ -30,23 +22,27 @@ interface PerguntasProps {
     const [quantidadeAcertos, setQuantidadeAcertos] = useState(0); 
     const [finalizou, setFinalizou] = useState(false);
     const [conferirRespostas, setConferirRespostas] = useState(false);
-    const maximoPerguntas = 10;
-
+    const [questoes, SetQuestoes] = useState([]); 
     
+
 
     // Alterar a pergunta atual
     function proximaPergunta() {
-        setPerguntaAtual((perguntaAtual + 1) % maximoPerguntas);
-    }
+        setPerguntaAtual((perguntaAtual + 1) % perguntasMax);
+    }    
 
     function perguntaAnterior() {
-        setPerguntaAtual((perguntaAtual - 1 + maximoPerguntas) % maximoPerguntas);
+        if(perguntaAtual < 1) {
+            setPerguntaAtual(perguntasMax -1);
+        }else{
+            setPerguntaAtual(perguntaAtual -1);
+        }
     }
     
     
     function randomizarPerguntas() {        
         const sorteadas: number[] = [];
-        while (sorteadas.length < maximoPerguntas) {
+        while (sorteadas.length < perguntasMax) {
             const numeroAleatorio = Math.floor(Math.random() * questoes.length);
             if (!sorteadas.includes(numeroAleatorio)) {
                 sorteadas.push(numeroAleatorio);
@@ -102,7 +98,7 @@ interface PerguntasProps {
         const novaOrdem: number[][] = [];
         const maximoRespostas = 4;
 
-        for (let i = 0; i < maximoPerguntas; i++) {
+        for (let i = 0; i < perguntasMax; i++) {
             const resposta: number[] = [];
             while (resposta.length < maximoRespostas) {
                 const numeroAleatorio = Math.floor(Math.random() * maximoRespostas + 1);
@@ -128,7 +124,7 @@ interface PerguntasProps {
     // Encerrando o simulado
     function finalizar() {
         let contador = 0;
-        for (let i = 0; i < maximoPerguntas; i++) {
+        for (let i = 0; i < perguntasMax; i++) {
             if (ordemRespostas[i].indexOf(1) === cartaoResposta[i]) { 
                 contador++;
             }
@@ -145,6 +141,14 @@ interface PerguntasProps {
     function Conferir() {
         setFinalizou(false);
     }
+
+
+    // Área de testes      
+
+    
+    //
+
+
 
     // Front-end
     return (

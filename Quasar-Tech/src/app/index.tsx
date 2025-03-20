@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet, SafeAreaView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParamList } from './rotas/types';
+import { screenOptions } from './rotas/navigationConfig';
 
 import Loading from "./loading"; // Componente de Loading ou SplashScreen
-
 import TopBar from './TopBar';
 import SideBar from './SideBar';
 import Home from "./home";
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>(); // Aqui você passa a tipagem
 
-const App = () => { 
-
+const Index: React.FC = () => {
+  const [maximoPerguntas, setMaximoPerguntas] = useState<number>(10); // Tipagem correta 
   const [showLoading, setShowLoading] = useState(true); // Controla a exibição da SplashScreen
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Controle da sidebar
+
+  const HomeWrapper = (props: any) => <Home {...props} maximoPerguntas={maximoPerguntas} />;
 
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
@@ -28,6 +30,7 @@ const App = () => {
     // Limpeza do timeout se o componente for desmontado antes de completar o tempo
     return () => clearTimeout(timer);
   }, []);
+  
 
   // Mostra a tela de SplashScreen (Loading) enquanto showLoading é true
   if (false) {
@@ -35,20 +38,22 @@ const App = () => {
   }
 
   return (
-      <SafeAreaView style={{ flex: 1 }}>
-        {/* Exibindo a Sidebar se o menu estiver aberto */}
-        {isMenuOpen && <SideBar closeMenu={closeMenu} />}
+    <SafeAreaView style={{ flex: 1 }}>
+      {/* Exibindo a Sidebar se o menu estiver aberto */}
+      {isMenuOpen && <SideBar closeMenu={closeMenu}  setMaximoPerguntas={setMaximoPerguntas} />}
 
-        <View style={styles.container}>
-          {/* Exibindo a TopBar */}
-          <TopBar openMenu={openMenu} />
+      <View style={styles.container}>
+        {/* Exibindo a TopBar */}
+        <TopBar openMenu={openMenu} />
 
-          {/* Stack de navegação */}
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Home" component={Home} />
-          </Stack.Navigator>
-        </View>
-      </SafeAreaView>   
+        {/* Stack de navegação */}
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Home">
+          {props => <Home {...props} maximoPerguntas={maximoPerguntas} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>}
+        </Stack.Screen>
+        </Stack.Navigator>
+      </View>
+    </SafeAreaView>   
   );
 };
 
@@ -58,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Index;

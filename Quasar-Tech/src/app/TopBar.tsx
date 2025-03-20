@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const TopBar = ({ openMenu }) => {
+
+const TopBar: React.FC<{ openMenu: () => void }> = ({ openMenu }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.hamburguer} onPress={openMenu}>
@@ -29,7 +30,6 @@ const styles = StyleSheet.create({
   },
   hamburguer: {
     maxWidth: '10%',
-    float: 'left',
   }
   
 });
