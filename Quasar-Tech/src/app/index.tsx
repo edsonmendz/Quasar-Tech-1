@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  pad0: {
+    padding: 0
+  }
 });
 
 export default Index;

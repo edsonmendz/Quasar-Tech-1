@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Resposta from './Resposta';
 import Button from './componentes/botao';
+import estilos from './componentes/botaocss';
 
 interface PerguntaProps {
     perguntaAtual: number;         // Índice da pergunta atual (assumindo que é um número)
@@ -60,12 +61,15 @@ function Pergunta({
                     conferirRespostas={conferirRespostas} ordemRespostas={ordemRespostas} 
                 />
             </View>
-
-            <View style={styles.botoesContainer}>
-                <Button title="Voltar" onPress={perguntaAnterior} />
-                <Button title="Encerrar" onPress={finalizar} />
-                <Button title="Próximo" onPress={proximaPergunta} />
-            </View>
+            <View style={estilos.fixedBottom}>
+                <View style={[styles.botoesContainer, estilos.fonte1em]}>
+                    <Button title="Voltar" style={estilos.larguraAuto} onPress={perguntaAnterior} />                
+                    <Button title="Próximo" style={estilos.larguraAuto} onPress={proximaPergunta} />
+                </View>
+                <View>
+                    <Button title="Encerrar" onPress={finalizar} />
+                </View>
+            </View>            
         </View>
     );
 }
@@ -87,8 +91,7 @@ const styles = StyleSheet.create({
     },
     botoesContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        marginTop: 20,
+        justifyContent: 'space-evenly',        
     }
 });
 

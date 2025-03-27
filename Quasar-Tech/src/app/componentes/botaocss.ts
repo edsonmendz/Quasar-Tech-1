@@ -22,8 +22,17 @@ export const estilos = StyleSheet.create({
         paddingHorizontal: 5,
         marginHorizontal: '1%',
     } as ViewStyle,
+    altura15: {
+        height: '15%',
+    } as ViewStyle,
+    larguraAuto: {
+        width: 'auto'
+    },
     largura100: {
         width: '100%',
+    } as ViewStyle,
+    largura96: {
+        width: '96%',
     } as ViewStyle,
     largura50: {
         width: '50%',
@@ -55,6 +64,16 @@ export const estilos = StyleSheet.create({
         borderColor: 'salmon',
         color: 'white',
     } as ViewStyle,
+    fixedBottom: {
+        marginTop: 0,
+        width: 'auto',
+        position: 'absolute', // Fixa a View em relação ao container pai
+        bottom: 0,           // Posiciona no fundo da tela
+        left: 0,             // Opcional: alinha à esquerda
+        right: 0,            // Opcional: alinha à direita (ocupa toda a largura)
+        backgroundColor: 'lightblue', // Apenas para visualizar
+        padding: 10,         // Espaçamento interno
+      },
 });
 
 export default estilos;
