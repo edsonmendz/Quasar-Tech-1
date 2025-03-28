@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { View, StyleSheet, SafeAreaView } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '../rotas/types';
-import { screenOptions } from '../rotas/navigationConfig';
-
 import Loading from "./loading"; // Componente de Loading ou SplashScreen
 import TopBar from './TopBar';
 import SideBar from './SideBar';
