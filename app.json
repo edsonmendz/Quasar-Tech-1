@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "2d7ae52c-e47b-4aea-b5c9-fa28891f138e"
+      }
+    },
+    "android": {
+      "package": "com.edsonmendesfullstack.quasartech1"
+    }
+  }
+}

@@ -17,5 +17,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "src/app/loadingcss.js", "src/app/TopBar.tsx", "src/app/SideBar.jsx"  ]
+, "src/app/loadingcss.js", "src/app/TopBar.tsx", "src/app/SideBar.jsx", "src/rotas/types.ts"  ]
 }

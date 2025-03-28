@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TouchableWithoutFeedback, Keyboard } from "react-native";
 import Button from "./componentes/botao";
 import { Link } from "expo-router";
-import { RootStackParamList } from './rotas/types'; // Caminho onde você definiu RootStackParamList
+import { RootStackParamList } from '../rotas/types'; // Caminho onde você definiu RootStackParamList
 import { RouteProp, useRoute } from '@react-navigation/native'; // Use para pegar os parâmetros da rota
 
 type HomeRouteProp = RouteProp<RootStackParamList, 'Home'>;

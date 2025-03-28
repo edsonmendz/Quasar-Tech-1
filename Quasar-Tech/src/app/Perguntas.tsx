@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
 import { RouteProp, useRoute } from '@react-navigation/native';
-import { RootStackParamList } from './rotas/types';
+import { RootStackParamList } from '../rotas/types';
 
 type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
 

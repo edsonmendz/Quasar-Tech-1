@@ -1,7 +1,9 @@
 // navigationConfig.ts
 
-export const screenOptions = {
+const screenOptions = {
   Home: {
     maximoPerguntas: 10,
   },
 };
+
+export default screenOptions;
