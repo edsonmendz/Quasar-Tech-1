@@ -3,6 +3,8 @@ import { Animated, StyleSheet, Text, TouchableOpacity, View, Linking } from 'rea
 import Icon from 'react-native-vector-icons/Feather';
 import Awesome from "react-native-vector-icons/FontAwesome"; // Biblioteca de ícones
 import MyCheckbox from './componentes/MyCheckbox';
+import Doacoes from './doacoes';
+
 
 interface SidebarProps {
   closeMenu: () => void;
@@ -77,6 +79,9 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
             <Awesome name="linkedin" size={30} color="#fff" style={styles.linkAzul} />
           </TouchableOpacity>
+        </View>
+        <View>
+          <Doacoes />
         </View>
       </View>
     </Animated.View>
