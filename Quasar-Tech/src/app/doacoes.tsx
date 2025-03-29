@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import estilos from './componentes/botaocss';
+import Toast from 'react-native-toast-message';
 
 const Doacoes = () => {
   const chaveBitcoin = "bc1qmqv74vx5ww053dt7fv4csj70ffu8msq0m9a37n";
@@ -15,7 +16,15 @@ const Doacoes = () => {
 
   const copiarParaClipboard = () => {
     Clipboard.setString(chaveBitcoin);
-    alert("Chave copiada para o clipboard!");
+
+    // Mostra a notificação Toast
+    Toast.show({
+      type: 'success', // Tipos comuns: 'success', 'error', 'info'
+      text1: 'Sucesso!',
+      text2: 'Chave copiada!',
+      position: 'bottom', // Posição do Toast na tela
+      visibilityTime: 2000, // Duração em milissegundos
+    });
   };
 
   return (
@@ -35,6 +44,9 @@ const Doacoes = () => {
           <Ionicons name="copy-outline" size={24} color="black" />
         </View>
       </TouchableOpacity>
+      <View style={estilos.margemEsquerda}>
+        <Toast />
+      </View>
     </View>
   );
 };

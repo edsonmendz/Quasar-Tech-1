@@ -46,6 +46,9 @@ export const estilos = StyleSheet.create({
     margemVertical: {
         marginVertical: 8,
     } as ViewStyle,
+    margemEsquerda: {
+        marginLeft: "45%"
+    },
     resposta: {
         backgroundColor: 'skyblue',
         color: 'white',
