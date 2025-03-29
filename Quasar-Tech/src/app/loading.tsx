@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { View, Image, Animated } from "react-native";
-import { estilos } from "./loadingcss"; // Importa o estilo
+import estilos from "./componentes/botaocss";
+//import { estilos } from "./loadingcss"; // Importa o estilo
 
 export default function Loading() {
     const rotateValue = new Animated.Value(0); // Para rotação

@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import Awesome from "react-native-vector-icons/FontAwesome"; // Biblioteca de ícones
 import MyCheckbox from './componentes/MyCheckbox';
 import Doacoes from './doacoes';
+import estilos from './loadingcss';
 
 
 interface SidebarProps {
@@ -50,9 +51,9 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <Icon style={[styles.botaoBranco]} name="x" size={30} />
         </TouchableOpacity>
       </View>      
-      <View style={styles.menu}>
-        <View style={styles.flexRow}>
-          <Text style={[styles.opcao, styles.botaoPreto]}>Perguntas: </Text>
+      <View style={[styles.menu]}>        
+        <View style={[styles.flexRow]}>
+          <Text style={[styles.opcao, styles.botaoPreto, styles.displayFlex]}>Perguntas: </Text>
           {[10, 20, 30].map((value) => (
             <MyCheckbox 
               key={value} 
@@ -63,23 +64,27 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
               }} 
             />
           ))}
-        </View>    
-        <TouchableOpacity>
+        </View>
+        <View style={[styles.displayFlex]}>
           <Text style={[styles.opcao, styles.botaoPreto]}>Contato e Sugestões</Text>
-        </TouchableOpacity>
-        <View style={styles.links}>
+          <View style={styles.links}>
+          
           <TouchableOpacity onPress={() => openURL("mailto:edsonmendesfullstack@gmail.com")}>
             <Awesome name="envelope" size={30} color="#fff" style={styles.LinkVermelho} />
           </TouchableOpacity>
-
           <TouchableOpacity onPress={() => openURL("https://github.com/edsonmendz")}>
             <Awesome name="github" size={30} color="#fff" style={styles.linkPreto} />
           </TouchableOpacity>
-
           <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
             <Awesome name="linkedin" size={30} color="#fff" style={styles.linkAzul} />
           </TouchableOpacity>
+          </View>
         </View>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
+        <Text> </Text>
         <View>
           <Doacoes />
         </View>
@@ -90,6 +95,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
 
 const styles = StyleSheet.create({
   container: {
+    
     position: 'absolute',
     top: 0,
     bottom: 0,
@@ -101,6 +107,9 @@ const styles = StyleSheet.create({
   menu: {
     marginTop: '4%',
     paddingHorizontal: '5%',
+    flex: 1,
+    flexGrow: 1,
+    justifyContent: 'space-between',
   },
   botaoBranco: {
     color: '#fff',
@@ -149,7 +158,10 @@ const styles = StyleSheet.create({
   LinkVermelho: {
     fontSize: 30,
     color: '#f00',
-  }    
+  },
+  displayFlex: {
+    display: 'flex'
+  },  
 });
 
 export default Sidebar;

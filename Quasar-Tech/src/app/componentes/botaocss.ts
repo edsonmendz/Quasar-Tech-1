@@ -1,6 +1,18 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const estilos = StyleSheet.create({
+    centralizar: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    } as ViewStyle,
+    chave: {
+        fontSize: 16,
+        fontFamily: 'monospace', // Mantém alinhamento uniforme entre caracteres
+      },
+    chaveContainer: {
+        alignItems: 'center',
+        marginBottom: 20,
+      } as ViewStyle,
     esperando: {
         backgroundColor: '#fff',
         color: '#000',
@@ -55,6 +67,13 @@ export const estilos = StyleSheet.create({
         borderColor: 'salmon',
         color: 'white',
     } as ViewStyle,
+    logo: {
+        alignSelf: "center",
+        marginTop: "-60%",
+        flex: 1,
+        width: "60%",
+        resizeMode: "contain",        
+    }
 });
 
 export default estilos;
