@@ -4,6 +4,7 @@ import Button from "./componentes/botao";
 import { Link } from "expo-router";
 import { RootStackParamList } from '../rotas/types'; // Caminho onde você definiu RootStackParamList
 import { RouteProp, useRoute } from '@react-navigation/native'; // Use para pegar os parâmetros da rota
+import estilos from "./componentes/botaocss"
 
 type HomeRouteProp = RouteProp<RootStackParamList, 'Home'>;
 
@@ -28,9 +29,9 @@ const Home: React.FC<HomeProps> = ({ maximoPerguntas, isMenuOpen ,setIsMenuOpen 
         Keyboard.dismiss(); // Esconde o teclado se estiver aberto
       }}
     >
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View style={{ paddingHorizontal: "8%" }}>
-        <Link
+    <View style={[estilos.centralizar, estilos.largura100]}>
+      <View style={[estilos.largura90]} >
+        <Link 
           href={{ pathname: "/Perguntas", params: { nomeArquivo: "Tpp", maximoPerguntas } }}
           asChild
         >

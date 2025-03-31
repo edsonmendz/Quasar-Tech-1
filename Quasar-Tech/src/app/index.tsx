@@ -47,7 +47,7 @@ const Index: React.FC = () => {
 
         {/* Stack de navegação */}
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home">
+        <Stack.Screen  name="Home">
           {props => <Home {...props} maximoPerguntas={maximoPerguntas} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>}
         </Stack.Screen>
         </Stack.Navigator>
@@ -58,7 +58,7 @@ const Index: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
 });
 

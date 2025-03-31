@@ -1,6 +1,9 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const estilos = StyleSheet.create({
+    altura10: {
+        height: "14%",
+    } as ViewStyle,
     centralizar: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -19,23 +22,27 @@ export const estilos = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderWidth: 2,
-        borderColor: 'skyblue',
+        borderColor: '#6200ee',
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
     } as ViewStyle,
     esperandoAtivo: {
-        backgroundColor: 'skyblue', // Efeito "clicado"
+        backgroundColor: '#6200ee', // Efeito "clicado"
         color: 'white',
     } as ViewStyle,
     fonte1em: {
-        fontSize: 18,
-        paddingVertical: 10,
-        paddingHorizontal: 5,
+        fontSize: 22,
+        paddingVertical: 8,
+        paddingHorizontal: '5%',
         marginHorizontal: '1%',
-    } as ViewStyle,
+        fontWeight: 'bold'
+    },
     largura100: {
         width: '100%',
+    } as ViewStyle,
+    largura90: {
+        width: '90%'
     } as ViewStyle,
     largura50: {
         width: '50%',
@@ -44,18 +51,21 @@ export const estilos = StyleSheet.create({
         width: '26%',
     } as ViewStyle,
     margemVertical: {
-        marginVertical: 8,
+        marginVertical: "1%",
     } as ViewStyle,
     margemEsquerda: {
         marginLeft: "45%"
     },
+    padding5: {
+        padding: '5%'
+    } as ViewStyle,
     resposta: {
-        backgroundColor: 'skyblue',
+        backgroundColor: '#6200ee',
         color: 'white',
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderWidth: 2,
-        borderColor: 'skyblue',
+        borderColor: '#6200ee',
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
