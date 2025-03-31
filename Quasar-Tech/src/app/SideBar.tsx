@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Animated, StyleSheet, Text, TouchableOpacity, View, Linking } from 'react-native';
+import { Animated, StyleSheet, Text, TouchableOpacity, View, Linking, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Awesome from "react-native-vector-icons/FontAwesome"; // Biblioteca de ícones
 import MyCheckbox from './componentes/MyCheckbox';
 import Doacoes from './doacoes';
-import estilos from './loadingcss';
 
 
 interface SidebarProps {
@@ -18,10 +17,11 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
 
   const openURL = async (url: string) => {
     const supported = await Linking.canOpenURL(url);
+  
     if (supported) {
       await Linking.openURL(url);
     } else {
-      console.error("Não foi possível abrir o link:", url);
+      Alert.alert(`Não foi possível abrir o link: ${url}`);
     }
   };
 

@@ -16,6 +16,26 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "mailto"
+            },
+            {
+              "scheme": "https",
+              "host": "*.linkedin.com"
+            },
+            {
+              "scheme": "https",
+              "host": "*.github.com"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+      ,
       "package": "com.edsonmendesfullstack.QuasarTech"
     },
     "web": {
