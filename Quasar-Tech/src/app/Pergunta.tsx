@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Resposta from './Resposta';
 import Button from './componentes/botao';
+import estilos from '././componentes/botaocss';
 
 interface PerguntaProps {
     perguntaAtual: number;         // Índice da pergunta atual (assumindo que é um número)
@@ -32,9 +33,9 @@ function Pergunta({
 {     
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.pergunta}>
-                <Text style={styles.perguntaNumero}>{perguntaAtual + 1} </Text>
+        <View style={[styles.container]}>
+            <Text style={[styles.pergunta, estilos.monospace]}>
+                <Text style={[styles.perguntaNumero]}>{perguntaAtual + 1 + ")"} </Text>
                 {pergunta[0]}
             </Text>
 
@@ -61,10 +62,14 @@ function Pergunta({
                 />
             </View>
 
-            <View style={styles.botoesContainer}>
-                <Button title="Voltar" onPress={perguntaAnterior} />
-                <Button title="Encerrar" onPress={finalizar} />
-                <Button title="Próximo" onPress={proximaPergunta} />
+            <View style={[estilos.flexRow, estilos.rodape]}>
+                <View style={[styles.botoesContainer,estilos.largura100]}>
+                    <Button style={estilos.largura45} title="Anterior" onPress={perguntaAnterior} />                
+                    <Button title="Próximo" onPress={proximaPergunta} />
+                </View>
+                <View style={estilos.largura100}>
+                    <Button title="Encerrar" onPress={finalizar} />
+                </View>                
             </View>
         </View>
     );
@@ -72,12 +77,13 @@ function Pergunta({
 
 const styles = StyleSheet.create({
     container: {
-        padding: 16,
+        padding: "5%",
         backgroundColor: '#fff',
+        width: "100%",
         flex: 1,
     },
     pergunta: {
-        fontSize: 18,
+        fontSize: 19,
         fontWeight: 'bold',
         marginBottom: 10,
     },

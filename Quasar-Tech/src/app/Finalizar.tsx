@@ -20,13 +20,13 @@ const Finalizar: React.FC<FinalizarProps> = ({ Concluir, Conferir, conferirRespo
         <View style={styles.container}>            
             {!conferirRespostas ? (
                 <View>
-                    <Text style={styles.textoPergunta}>Tem certeza de que deseja finalizar o simulado?</Text>
+                    <Text style={[styles.textoPergunta, estilos.fonte2em]}>Tem certeza de que deseja finalizar o simulado?</Text>
                     <Button title="Concluir" onPress={Concluir} />
                     <Button title="Voltar" onPress={finalizar} />
                 </View>
             ) : (
                 <View>
-                    <Text style={styles.resultado}>
+                    <Text style={[styles.resultado, estilos.fonte2em]}>
                         Você acertou: {quantidadeAcertos} pergunta{quantidadeAcertos !== 1 ? 's' : ''}
                     </Text>
                     <Button title="Conferir Respostas" onPress={Conferir} />

@@ -15,7 +15,7 @@ const Button = forwardRef<typeof TouchableOpacity, ButtonProps>((props, ref) => 
 
   return (
     <TouchableOpacity onPress={onPress} style={[styles.button, estilos.esperando, estilos.margemVertical ]}>
-      <Text style={estilos.fonte1em}>{title}</Text>
+      <Text style={estilos.fonte2em}>{title}</Text>
     </TouchableOpacity>
   );
 });

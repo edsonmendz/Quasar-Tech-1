@@ -1,10 +1,14 @@
-import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
+import { StyleSheet, ViewStyle, TextStyle, View } from 'react-native';
 
 export const estilos = StyleSheet.create({
     altura10: {
         height: "14%",
     } as ViewStyle,
     centralizar: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    } as ViewStyle,
+    centralizarNormal: {
         justifyContent: 'center',
         alignItems: 'center',
     } as ViewStyle,
@@ -31,8 +35,20 @@ export const estilos = StyleSheet.create({
         backgroundColor: '#6200ee', // Efeito "clicado"
         color: 'white',
     } as ViewStyle,
+    flexRow: {
+        flex: 0,
+        justifyContent: "center",
+        alignItems: "center",
+    },
     fonte1em: {
-        fontSize: 22,
+        fontSize: 16,
+        paddingVertical: 8,
+        paddingHorizontal: '5%',
+        marginHorizontal: '1%',
+        fontWeight: 'bold'
+    },
+    fonte2em: {
+        fontSize: 24,
         paddingVertical: 8,
         paddingHorizontal: '5%',
         marginHorizontal: '1%',
@@ -47,6 +63,9 @@ export const estilos = StyleSheet.create({
     largura50: {
         width: '50%',
     } as ViewStyle,
+    largura45: {
+        minWidthwidth: "45%",
+    } as ViewStyle,
     largura25: {
         width: '26%',
     } as ViewStyle,
@@ -55,6 +74,9 @@ export const estilos = StyleSheet.create({
     } as ViewStyle,
     margemEsquerda: {
         marginLeft: "45%"
+    },
+    monospace: {
+        fontFamily: 'monospace'
     },
     padding5: {
         padding: '5%'
@@ -80,6 +102,14 @@ export const estilos = StyleSheet.create({
         borderColor: 'salmon',
         color: 'white',
     } as ViewStyle,
+    rodape: {
+        position: 'absolute',
+        left: "3%",
+        right: "3%",
+        bottom: "2%",
+        justifyContent: 'center',
+        alignItems: 'center',
+      } as ViewStyle,
     logo: {
         alignSelf: "center",
         marginTop: "-60%",

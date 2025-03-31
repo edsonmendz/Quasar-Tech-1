@@ -32,8 +32,7 @@ function Resposta({ letra, resposta, responder, num, cartaoResposta, perguntaAtu
             style={[ estilos.esperando, classe, estilos.largura100, estilos.margemVertical]}
         >   
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Text style={{ fontWeight: 'bold', marginRight: 5 }}>{letra}</Text>
-                <Text>{resposta}</Text>
+                <Text style={[{ fontWeight: 'bold', marginRight: 5 }, estilos.fonte1em]}>{letra + ") " + resposta}</Text>                
             </View>
         </TouchableOpacity>      
     );
