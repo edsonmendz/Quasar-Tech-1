@@ -5,37 +5,35 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "https",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "intentFilters": [
+  "adaptiveIcon": {
+    "foregroundImage": "./assets/images/adaptive-icon.png",
+    "backgroundColor": "#ffffff"
+  },
+  "intentFilters": [
+    {
+      "action": "VIEW",
+      "data": [
         {
-          "action": "VIEW",
-          "data": [
-            {
-              "scheme": "mailto"
-            },
-            {
-              "scheme": "https",
-              "host": "*.linkedin.com"
-            },
-            {
-              "scheme": "https",
-              "host": "*.github.com"
-            }
-          ],
-          "category": ["BROWSABLE", "DEFAULT"]
+          "scheme": "mailto"
+        },
+        {
+          "scheme": "https",
+          "host": "www.linkedin.com"
+        },
+        {
+          "scheme": "https",
+          "host": "github.com"
         }
-      ]
-      ,
+      ],
+      "category": ["BROWSABLE", "DEFAULT"]
+    }],
       "package": "com.edsonmendesfullstack.QuasarTech"
     },
     "web": {

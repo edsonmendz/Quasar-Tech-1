@@ -16,12 +16,16 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
   const [selectedValue, setSelectedValue] = useState<number | null>(10); // Definindo 10 como padrão
 
   const openURL = async (url: string) => {
-    const supported = await Linking.canOpenURL(url);
+    try {
+      const supported = await Linking.canOpenURL(url);
   
-    if (supported) {
-      await Linking.openURL(url);
-    } else {
-      Alert.alert(`Não foi possível abrir o link: ${url}`);
+      if (supported) {
+        await Linking.openURL(url);
+      } else {
+        Alert.alert("Erro", "Não foi possível abrir o link: " + url);
+      }
+    } catch (error) {
+      Alert.alert("Erro", "Ocorreu um problema ao tentar abrir o link.");
     }
   };
 

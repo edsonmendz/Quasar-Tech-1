@@ -30,7 +30,7 @@ const Home: React.FC<HomeProps> = ({ maximoPerguntas, isMenuOpen ,setIsMenuOpen 
       }}
     >
     <View style={[estilos.centralizar, estilos.largura100]}>
-      <View style={[estilos.largura90]} >
+      <View style={[estilos.largura90, estilos.margemVertical]} >
         <Link 
           href={{ pathname: "/Perguntas", params: { nomeArquivo: "Tpp", maximoPerguntas } }}
           asChild
