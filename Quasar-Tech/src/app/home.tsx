@@ -5,8 +5,8 @@ import { Link } from "expo-router";
 import { RootStackParamList } from '../rotas/types'; // Caminho onde você definiu RootStackParamList
 import { RouteProp, useRoute } from '@react-navigation/native'; // Use para pegar os parâmetros da rota
 import estilos from "./componentes/botaocss"
-
 type HomeRouteProp = RouteProp<RootStackParamList, 'Home'>;
+import * as amplitude from '@amplitude/analytics-react-native'; // Amplitude, tomara que funcione
 
 interface HomeProps {
   maximoPerguntas: number;
@@ -17,7 +17,12 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ maximoPerguntas, isMenuOpen, setIsMenuOpen }) => {
   // Obtém os parâmetros da navegação com a tipagem correta  
 
+  
 
+  useEffect(() => {
+    amplitude.init('bba4fc780cfe4d4ec23cc86d0a1e6f5c');
+    amplitude.track('Menu Aberto, dentro do useEffect!');  
+  }, [])
 
   return (
 

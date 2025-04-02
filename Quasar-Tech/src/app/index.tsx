@@ -20,6 +20,7 @@ const Index: React.FC = () => {
   const openMenu = () => setIsMenuOpen(true);
   const closeMenu = () => setIsMenuOpen(false);
 
+  
   useEffect(() => {
     // Após 3 segundos, muda o estado para false, permitindo que a Home seja exibida
     const timer = setTimeout(() => {
