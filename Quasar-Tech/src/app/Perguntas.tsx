@@ -54,7 +54,6 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
     // Sortear perguntas
     useEffect(() => {              
         if (!nomeArquivo) return; // Evita execução desnecessária caso a prop esteja vazia
-
         let dados;
         switch (nomeArquivo) {
             case "Tpp":
@@ -72,6 +71,15 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
             case "Socorrista":
                 dados = require('./questoesSocorrista').default;
                 break;
+            case "Bombeiros":
+                dados = require('./questoesBombeiroCivil').default;
+                break;
+            case "AcessoPorCordas":
+                dados = require('./questoesAcessoPorCordas').default;
+            break;
+            case "OficialDeJustica":
+                dados = require('./questoesOficialDeJustica').default;
+            break;
             default:
                 console.warn("Arquivo de questões não encontrado para:", nomeArquivo);
                 return;
