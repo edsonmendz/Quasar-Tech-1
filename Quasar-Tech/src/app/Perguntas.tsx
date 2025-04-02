@@ -71,7 +71,7 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
             case "Socorrista":
                 dados = require('./questoesSocorrista').default;
                 break;
-            case "Bombeiros":
+            case "BombeiroCivil":
                 dados = require('./questoesBombeiroCivil').default;
                 break;
             case "AcessoPorCordas":
