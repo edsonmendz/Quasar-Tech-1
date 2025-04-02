@@ -1048,6 +1048,286 @@ const questoes = [
         "Registrar o risco sem necessidade de ação.",
         "Ignorar o risco até que cause um incidente.",
         "Transferir a responsabilidade para outro setor."
+    ],
+    [
+        "O que define um risco ergonômico no ambiente de trabalho?",
+        "Condições que possam afetar o conforto, saúde e segurança do trabalhador devido a fatores relacionados à postura, repetitividade e esforço excessivo.",
+        "Exposição a produtos químicos perigosos.",
+        "Trabalhos realizados em ambientes com baixa luminosidade.",
+        "Uso inadequado de EPIs."
+    ],
+    [
+        "Qual é o principal objetivo do Laudo Técnico de Condições Ambientais do Trabalho (LTCAT)?",
+        "Comprovar a insalubridade ou periculosidade e auxiliar na concessão de aposentadoria especial.",
+        "Controlar a produtividade dos funcionários.",
+        "Promover treinamentos motivacionais.",
+        "Avaliar a satisfação dos empregados."
+    ],
+    [
+        "Qual é a importância do Programa de Controle Médico de Saúde Ocupacional (PCMSO)?",
+        "Monitorar a saúde dos trabalhadores e prevenir doenças ocupacionais por meio de exames médicos periódicos.",
+        "Garantir a máxima produtividade na empresa.",
+        "Aprimorar a comunicação entre setores administrativos.",
+        "Supervisionar o uso de uniformes."
+    ],
+    [
+        "O que caracteriza um agente químico no ambiente de trabalho?",
+        "Substâncias que podem causar danos à saúde por inalação, ingestão ou contato com a pele.",
+        "Exposição a temperaturas extremas.",
+        "Movimentos repetitivos durante o trabalho.",
+        "Riscos de queda em altura."
+    ],
+    [
+        "Segundo a NR 10, quais medidas devem ser adotadas para trabalhos com eletricidade?",
+        "Isolamento adequado, uso de EPIs específicos e sinalização adequada da área de trabalho.",
+        "Exclusivamente uso de uniformes padronizados.",
+        "Proibição de qualquer uso de eletricidade.",
+        "Apenas supervisão visual do trabalho realizado."
+    ],
+    [
+        "O que é considerado um acidente de trabalho grave?",
+        "Aquele que resulta em morte, amputação ou perda de função permanente de um membro ou órgão.",
+        "Atrasos na execução de tarefas.",
+        "Pequenos ferimentos que não necessitam de atendimento médico.",
+        "Incidentes que não causam lesões físicas."
+    ],
+    [
+        "Qual é a principal função dos Equipamentos de Proteção Coletiva (EPCs)?",
+        "Proteger grupos de trabalhadores contra riscos presentes no ambiente de trabalho.",
+        "Proteger exclusivamente o trabalhador que os utiliza.",
+        "Aumentar a produtividade do setor.",
+        "Melhorar a estética do local de trabalho."
+    ],
+    [
+        "O que é considerado um ambiente confinado segundo a NR 33?",
+        "Qualquer espaço não projetado para ocupação contínua e com meios limitados de entrada e saída.",
+        "Ambientes abertos com ventilação natural constante.",
+        "Áreas de trabalho comuns e amplas.",
+        "Locais que possuem apenas um ponto de acesso."
+    ],
+    [
+        "Qual é a finalidade do Programa de Prevenção de Riscos Ambientais (PPRA)?",
+        "Preservar a saúde e integridade física dos trabalhadores através da antecipação, reconhecimento e controle de riscos ambientais.",
+        "Aumentar a produção industrial.",
+        "Controlar o uso de materiais de escritório.",
+        "Realizar treinamentos motivacionais."
+    ],
+    [
+        "O que caracteriza um risco biológico no ambiente de trabalho?",
+        "Exposição a microrganismos, parasitas, vírus, fungos e bactérias que possam causar doenças.",
+        "Trabalhos realizados em altura.",
+        "Movimentos repetitivos e esforços excessivos.",
+        "Uso de ferramentas pesadas."
+    ],
+    [
+        "Qual é o objetivo principal da Análise Preliminar de Riscos (APR)?",
+        "Identificar e avaliar riscos potenciais antes do início de uma atividade, visando implementar medidas preventivas.",
+        "Aumentar a produtividade através da supervisão contínua.",
+        "Melhorar a comunicação entre os funcionários.",
+        "Garantir a padronização dos uniformes."
+    ],
+    [
+        "O que caracteriza um risco físico no ambiente de trabalho?",
+        "Exposição a ruídos, vibrações, temperaturas extremas e radiações.",
+        "Contato com produtos químicos corrosivos.",
+        "Movimentos repetitivos e postura inadequada.",
+        "Uso incorreto de equipamentos de proteção."
+    ],
+    [
+        "Qual é o propósito da Permissão de Trabalho (PT) em atividades perigosas?",
+        "Estabelecer procedimentos seguros para a execução de tarefas críticas e prevenir acidentes.",
+        "Garantir intervalos regulares durante o expediente.",
+        "Registrar a presença dos funcionários diariamente.",
+        "Controlar o uso de equipamentos de escritório."
+    ],
+    [
+        "O que é um Plano de Emergência?",
+        "Conjunto de procedimentos estabelecidos para agir de maneira rápida e segura em situações de risco iminente.",
+        "Documentação dos horários de trabalho dos funcionários.",
+        "Lista de equipamentos disponíveis na empresa.",
+        "Relatório mensal de produtividade."
+    ],
+    [
+        "Qual é a principal finalidade do mapa de riscos em um ambiente de trabalho?",
+        "Identificar visualmente os riscos existentes em cada setor da empresa para facilitar o planejamento de ações preventivas.",
+        "Definir horários de almoço dos funcionários.",
+        "Organizar reuniões de equipe.",
+        "Estabelecer regras de vestimenta."
+    ],
+    [
+        "O que é considerado um risco mecânico?",
+        "Possibilidade de acidentes causados por máquinas e equipamentos em movimento ou com peças cortantes.",
+        "Contato com agentes biológicos.",
+        "Exposição a altas temperaturas.",
+        "Uso de produtos químicos inflamáveis."
+    ],
+    [
+        "Segundo a NR 35, qual é um dos principais requisitos para trabalhos em altura?",
+        "Treinamento adequado e uso de sistemas de proteção contra quedas.",
+        "Manter o ambiente sempre limpo e organizado.",
+        "Realizar atividades apenas durante o dia.",
+        "Usar uniformes padronizados."
+    ],
+    [
+        "O que é um EPI descartável?",
+        "Equipamento de proteção destinado a ser utilizado uma única vez e posteriormente descartado.",
+        "Equipamento que pode ser compartilhado por diversos funcionários.",
+        "Ferramenta utilizada para medição de produtividade.",
+        "Documento de registro de atividades."
+    ],
+    [
+        "Qual é o principal fator que caracteriza um ambiente insalubre?",
+        "Presença de agentes físicos, químicos ou biológicos em níveis acima dos limites de tolerância estabelecidos.",
+        "Excesso de funcionários no local de trabalho.",
+        "Falta de ventilação natural adequada.",
+        "Baixa produtividade."
+    ],
+    [
+        "O que é um Equipamento de Proteção Coletiva (EPC) comum em laboratórios químicos?",
+        "Sistema de exaustão para eliminação de vapores tóxicos.",
+        "Óculos de segurança individuais.",
+        "Calçados de proteção.",
+        "Protetores auriculares."
+    ],
+    [
+        "Qual é o objetivo principal do Programa de Prevenção de Riscos Ambientais (PPRA)?",
+        "Antecipar, reconhecer, avaliar e controlar riscos ambientais existentes ou que venham a existir no ambiente de trabalho.",
+        "Controlar a produtividade dos funcionários.",
+        "Estabelecer horários de trabalho fixos.",
+        "Garantir intervalos regulares durante o expediente."
+    ],
+    [
+        "O que caracteriza um risco ergonômico?",
+        "Condições que possam interferir na saúde física e mental do trabalhador, como postura inadequada e movimentos repetitivos.",
+        "Exposição a produtos químicos.",
+        "Exposição a ruídos excessivos.",
+        "Contato com agentes biológicos."
+    ],
+    [
+        "Qual é a principal função da CIPA (Comissão Interna de Prevenção de Acidentes)?",
+        "Promover a prevenção de acidentes e doenças ocupacionais, visando a preservação da saúde e segurança dos trabalhadores.",
+        "Fiscalizar o uso de uniformes.",
+        "Controlar a jornada de trabalho.",
+        "Supervisionar a limpeza do ambiente."
+    ],
+    [
+        "O que é um plano de evacuação de emergência?",
+        "Estratégia que define procedimentos para retirar pessoas de áreas de risco de forma rápida e segura.",
+        "Organização de escalas de trabalho.",
+        "Distribuição de materiais de escritório.",
+        "Controle de produtividade."
+    ],
+    [
+        "Qual é o principal risco associado ao trabalho em espaços confinados?",
+        "Baixa concentração de oxigênio e presença de gases tóxicos.",
+        "Excesso de ruído.",
+        "Movimentos repetitivos.",
+        "Falta de iluminação adequada."
+    ],
+    [
+        "O que é um laudo técnico de insalubridade?",
+        "Documento elaborado por profissional habilitado para avaliar e quantificar os agentes nocivos presentes no ambiente de trabalho.",
+        "Relatório mensal de produtividade.",
+        "Registro de ponto dos funcionários.",
+        "Lista de materiais de escritório."
+    ],
+    [
+        "Qual é a finalidade dos Equipamentos de Proteção Coletiva (EPC)?",
+        "Proteger o maior número possível de pessoas em um ambiente de trabalho contra riscos específicos.",
+        "Proteger um único trabalhador contra riscos diretos.",
+        "Fornecer materiais de escritório.",
+        "Aumentar a produtividade da equipe."
+    ],
+    [
+        "O que significa o termo 'periculosidade' no ambiente de trabalho?",
+        "Condição de trabalho que oferece risco iminente à vida do trabalhador, como exposição a explosivos e eletricidade em alta tensão.",
+        "Atividade que exige esforço físico moderado.",
+        "Trabalho realizado em ambientes com ruído.",
+        "Tarefas que exigem concentração contínua."
+    ],
+    [
+        "Qual é o objetivo do Diálogo Diário de Segurança (DDS)?",
+        "Promover a conscientização dos trabalhadores sobre segurança e saúde por meio de breves reuniões antes do início das atividades.",
+        "Avaliar a produtividade semanal.",
+        "Registrar presença dos funcionários.",
+        "Estabelecer horários de descanso."
+    ],
+    [
+        "O que caracteriza um ambiente de trabalho saudável?",
+        "Ambiente onde os riscos físicos, químicos, biológicos, ergonômicos e mecânicos são controlados adequadamente.",
+        "Local onde todos os funcionários usam uniformes padronizados.",
+        "Espaço com boa iluminação natural.",
+        "Área com plantas decorativas."
+    ],
+    [
+        "Qual é a principal medida de prevenção contra quedas em trabalho em altura?",
+        "Uso adequado de cintos de segurança e linhas de vida.",
+        "Garantir que todos os trabalhadores estejam usando uniforme.",
+        "Manter portas e janelas fechadas.",
+        "Reduzir o número de funcionários no local de trabalho."
+    ],
+    [
+        "O que é considerado um agente químico no ambiente de trabalho?",
+        "Substâncias que podem causar danos à saúde por meio de inalação, contato ou ingestão.",
+        "Ruídos constantes e repetitivos.",
+        "Temperaturas extremas.",
+        "Iluminação inadequada."
+    ],
+    [
+        "Qual é o principal objetivo de um programa de segurança do trabalho?",
+        "Prevenir acidentes e doenças ocupacionais, garantindo a saúde e bem-estar dos trabalhadores.",
+        "Controlar os horários de entrada e saída dos funcionários.",
+        "Aumentar a produtividade da equipe.",
+        "Distribuir uniformes adequados."
+    ],
+    [
+        "O que é considerado um acidente de trabalho típico?",
+        "Qualquer lesão ou doença adquirida durante o exercício das atividades profissionais.",
+        "Problemas pessoais fora do ambiente de trabalho.",
+        "Qualquer doença adquirida em ambientes domésticos.",
+        "Interrupções durante o expediente."
+    ],
+    [
+        "Quais são os principais riscos físicos no ambiente de trabalho?",
+        "Ruído, vibração, temperaturas extremas e radiações.",
+        "Exposição a produtos químicos.",
+        "Postura inadequada.",
+        "Atividades realizadas ao ar livre."
+    ],
+    [
+        "Qual é a finalidade de um mapa de riscos?",
+        "Identificar e classificar os riscos presentes em um ambiente de trabalho para facilitar sua prevenção e controle.",
+        "Organizar a distribuição de tarefas diárias.",
+        "Registrar a produtividade dos funcionários.",
+        "Elaborar o cronograma de férias da equipe."
+    ],
+    [
+        "O que é um Equipamento de Proteção Individual (EPI)?",
+        "Dispositivo ou produto destinado a proteger o trabalhador contra riscos específicos que possam ameaçar sua segurança e saúde.",
+        "Ferramenta para aumentar a produtividade.",
+        "Manual de procedimentos operacionais.",
+        "Instrumento para medir eficiência no trabalho."
+    ],
+    [
+        "Qual é a importância do treinamento periódico em segurança do trabalho?",
+        "Garantir que os trabalhadores estejam atualizados sobre procedimentos de segurança e prevenção de acidentes.",
+        "Promover o aumento de produtividade.",
+        "Estabelecer intervalos regulares durante o expediente.",
+        "Controlar o uso de materiais de escritório."
+    ],
+    [
+        "O que é uma análise preliminar de risco (APR)?",
+        "Procedimento que identifica possíveis riscos antes do início de uma atividade para implementar medidas preventivas.",
+        "Relatório sobre a produtividade semanal.",
+        "Documento sobre horários de entrada e saída.",
+        "Listagem de materiais disponíveis no estoque."
+    ],
+    [
+        "O que caracteriza um ambiente insalubre?",
+        "Ambiente onde o trabalhador é exposto a agentes nocivos acima dos limites permitidos pela legislação.",
+        "Área onde todos utilizam uniforme padronizado.",
+        "Local com boa ventilação e iluminação natural.",
+        "Espaço com plantas decorativas."
     ]
 ];
 

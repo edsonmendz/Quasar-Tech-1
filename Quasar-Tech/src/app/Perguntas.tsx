@@ -80,6 +80,9 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
             case "OficialDeJustica":
                 dados = require('./questoesOficialDeJustica').default;
             break;
+            case "SegurancaDoTrabalho":
+                dados = require('./questoesSegurancaDoTrabalho').default;
+            break;
             default:
                 console.warn("Arquivo de questões não encontrado para:", nomeArquivo);
                 return;
