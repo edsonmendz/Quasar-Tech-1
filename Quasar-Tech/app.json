@@ -9,8 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.edsonmendesfullstack.QuasarTech"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -21,21 +20,9 @@
         {
           "action": "VIEW",
           "data": [
-            {
-              "scheme": "mailto"
-            },
-            {
-              "scheme": "https",
-              "host": "www.linkedin.com"
-            },
-            {
-              "scheme": "https",
-              "host": "linkedin.com"
-            },
-            {
-              "scheme": "https",
-              "host": "github.com"
-            }
+            { "scheme": "mailto" },
+            { "scheme": "https", "host": "www.linkedin.com" },
+            { "scheme": "https", "host": "github.com" }
           ],
           "category": ["BROWSABLE", "DEFAULT"]
         }

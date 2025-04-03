@@ -79,7 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <TouchableOpacity onPress={() => openURL("https://github.com/edsonmendz")}>
             <Awesome name="github" size={30} color="#fff" style={styles.linkPreto} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openURL("linkedin://profile/edson-mendes-fullstack")}>
+          <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
             <Awesome name="linkedin" size={30} color="#fff" style={styles.linkAzul} />
           </TouchableOpacity>
           </View>
