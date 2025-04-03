@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Quasar-Tech",
-    "slug": "Quasar-Tech",
+    "name": "Estudos Específicos",
+    "slug": "estudos-especificos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/LogoE.png",
@@ -34,7 +34,7 @@
       ],
       "category": ["BROWSABLE", "DEFAULT"]
     }],
-      "package": "com.edsonmendesfullstack.QuasarTech"
+      "package": "com.edsonmendesfullstack.EstudosEspecificos"
     },
     "web": {
       "bundler": "metro",
