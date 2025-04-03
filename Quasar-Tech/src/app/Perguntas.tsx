@@ -4,6 +4,7 @@ import Pergunta from "./Pergunta";
 import Finalizar from "./Finalizar";
 import { RouteProp, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../rotas/types';
+import * as amplitude from '@amplitude/analytics-react-native'; // Amplitude, tomara que funcione
 
 type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
 
@@ -55,6 +56,8 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
     useEffect(() => {              
         if (!nomeArquivo) return; // Evita execução desnecessária caso a prop esteja vazia
         let dados;
+        amplitude.init('bba4fc780cfe4d4ec23cc86d0a1e6f5c');
+        amplitude.track(`${nomeArquivo} Aberto`);
         switch (nomeArquivo) {
             case "Tpp":
                 dados = require('./questoesTpp').default;                
