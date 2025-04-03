@@ -11,11 +11,11 @@ interface ButtonProps extends TouchableOpacityProps {
 }
 
 const Button = forwardRef<typeof TouchableOpacity, ButtonProps>((props, ref) => {
-  const { title, onPress, style } = props; // Desestruturação correta
+  const { title, onPress } = props; // Desestruturação correta
 
   return (
     <TouchableOpacity onPress={onPress} style={[styles.button, estilos.esperando, estilos.margemVertical ]}>
-      <Text style={estilos.fonte2em}>{title}</Text>
+      <Text style={[estilos.fonte2em, estilos.centralizarNormal]}>{title}</Text>
     </TouchableOpacity>
   );
 });

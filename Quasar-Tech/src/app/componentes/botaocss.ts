@@ -11,7 +11,8 @@ export const estilos = StyleSheet.create({
     centralizarNormal: {
         justifyContent: 'center',
         alignItems: 'center',
-    } as ViewStyle,
+        textAlign: 'center',
+    } ,
     chave: {
         fontSize: 16,
         fontFamily: 'monospace', // Mantém alinhamento uniforme entre caracteres
