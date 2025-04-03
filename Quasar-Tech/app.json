@@ -12,29 +12,36 @@
       "supportsTablet": true
     },
     "android": {
-  "adaptiveIcon": {
-    "foregroundImage": "./assets/images/LogoE.png",
-    "backgroundColor": "#ffffff"
-  },
-  "intentFilters": [
-    {
-      "action": "VIEW",
-      "data": [
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/LogoE.png",
+        "backgroundColor": "#ffffff"
+      },
+      "intentFilters": [
         {
-          "scheme": "mailto"
-        },
-        {
-          "scheme": "https",
-          "host": "www.linkedin.com"
-        },
-        {
-          "scheme": "https",
-          "host": "github.com"
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "mailto"
+            },
+            {
+              "scheme": "https",
+              "host": "www.linkedin.com"
+            },
+            {
+              "scheme": "https",
+              "host": "github.com"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ],
-      "category": ["BROWSABLE", "DEFAULT"]
-    }],
-      "package": "com.edsonmendesfullstack.EstudosEspecificos"
+      "package": "com.edsonmendesfullstack.EstudosEspecificos",
+      "permissions": [
+        "INTERNET"
+      ]
     },
     "web": {
       "bundler": "metro",
