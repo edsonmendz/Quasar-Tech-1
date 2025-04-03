@@ -83,9 +83,15 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
             case "SegurancaDoTrabalho":
                 dados = require('./questoesSegurancaDoTrabalho').default;
             break;
+            case "AproximaçãoEBalizamentoDeAeronaves":
+                dados = require('./questoesAproximaçãoEBalizamentoDeAeronaves').default;
+            break;
+            case "LGPD":
+                dados = require('./questoesLeiGeralDeProteçãoDeDados').default;
+            break;
             default:
                 console.warn("Arquivo de questões não encontrado para:", nomeArquivo);
-                return;
+            return;
         }
         SetQuestoes(dados);
     }, [nomeArquivo]);

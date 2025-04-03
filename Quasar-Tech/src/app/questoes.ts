@@ -14,5 +14,8 @@ const questoes: QuestoesMap[] = [
     { title: "Acesso por Cordas", tag: "AcessoPorCordas", path: './questoesAcessoPorCordas' },
     { title: "Oficial de Justiça", tag: "OficialDeJustica", path: './questoesOficialDeJustiça' },
     { title: "Segurança do Trabalho", tag: "SegurancaDoTrabalho", path: './questoesSegurancaDoTrabalho' },
+    { title: "Aproximação e Balizamento de Aeronaves", tag: "AproximaçãoEBalizamentoDeAeronaves", path: './questoesAproximaçãoEBalizamentoDeAeronaves' },
+    { title: "Lei Geral de Proteção de Dados", tag: "LGPD", path: './questoesLeiGeralDeProteçãoDeDados' },
+    
 ];
 export default questoes;
