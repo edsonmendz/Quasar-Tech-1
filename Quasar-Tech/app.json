@@ -5,35 +5,41 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "https",
+    "scheme": "quasartech",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.edsonmendesfullstack.QuasarTech"
     },
     "android": {
-  "adaptiveIcon": {
-    "foregroundImage": "./assets/images/adaptive-icon.png",
-    "backgroundColor": "#ffffff"
-  },
-  "intentFilters": [
-    {
-      "action": "VIEW",
-      "data": [
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "intentFilters": [
         {
-          "scheme": "mailto"
-        },
-        {
-          "scheme": "https",
-          "host": "www.linkedin.com"
-        },
-        {
-          "scheme": "https",
-          "host": "github.com"
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "mailto"
+            },
+            {
+              "scheme": "https",
+              "host": "www.linkedin.com"
+            },
+            {
+              "scheme": "https",
+              "host": "linkedin.com"
+            },
+            {
+              "scheme": "https",
+              "host": "github.com"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
         }
       ],
-      "category": ["BROWSABLE", "DEFAULT"]
-    }],
       "package": "com.edsonmendesfullstack.QuasarTech"
     },
     "web": {
