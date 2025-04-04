@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
       if (supported) {
         await Linking.openURL(url);
       } else {
-        Alert.alert("Erro", "Não foi possível abrir o link: " + url);
+        Linking.openURL('https://youtube.com'); // Abre um link alternativo
       }
     } catch (error) {
       Alert.alert("Erro", "Ocorreu um problema ao tentar abrir o link.");
@@ -79,7 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <TouchableOpacity onPress={() => openURL("https://github.com/edsonmendz")}>
             <Awesome name="github" size={30} color="#fff" style={styles.linkPreto} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
+          <TouchableOpacity onPress={() => openURL("https://linkedin.com/in/edson-mendes-fullsctack/")}>
             <Awesome name="linkedin" size={30} color="#fff" style={styles.linkAzul} />
           </TouchableOpacity>
           </View>
