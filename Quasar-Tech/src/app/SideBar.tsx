@@ -17,13 +17,11 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
 
   const openURL = async (url: string) => {
     try {
-      const supported = await Linking.canOpenURL(url);
-  
-      if (supported) {
+      
         Linking.openURL(url);
-      } else {
-        Linking.openURL('https://youtube.com'); // Abre um link alternativo
-      }
+      
+        // Linking.openURL('https://www.linkedin.com/in/edson-mendes-fullsctack/'); // Abre um link alternativo
+      
     } catch (error) {
       Alert.alert("Erro", "Ocorreu um problema ao tentar abrir o link.");
     }
