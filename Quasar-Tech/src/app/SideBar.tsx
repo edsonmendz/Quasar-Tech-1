@@ -20,7 +20,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
       const supported = await Linking.canOpenURL(url);
   
       if (supported) {
-        await Linking.openURL(url);
+        Linking.openURL(url);
       } else {
         Linking.openURL('https://youtube.com'); // Abre um link alternativo
       }
