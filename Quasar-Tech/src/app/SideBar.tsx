@@ -74,13 +74,13 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <View style={styles.links}>
           
           <TouchableOpacity onPress={() => openURL("mailto:edsonmendesfullstack@gmail.com")}>
-            <Awesome name="envelope" size={30} color="#fff" style={styles.LinkVermelho} />
+            <Awesome name="envelope" size={40} style={[styles.LinkVermelho, styles.padding1, styles.borda ]} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => openURL("https://github.com/edsonmendz")}>
-            <Awesome name="github" size={30} color="#fff" style={styles.linkPreto} />
+            <Awesome name="github" size={40} color="#fff" style={[styles.linkPreto, styles.padding1, styles.borda ]} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
-            <Awesome name="linkedin" size={30} color="#fff" style={styles.linkAzul} />
+            <Awesome name="linkedin" size={40} color="#fff" style={[styles.linkAzul, styles.padding1, styles.borda ]} />
           </TouchableOpacity>
           </View>
         </View>
@@ -114,6 +114,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexGrow: 1,
     justifyContent: 'space-between',
+  },
+  borda : {    
+    borderWidth: 2.5,
+    borderRadius: 5
   },
   botaoBranco: {
     color: '#fff',
@@ -151,21 +155,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  LinkBranco: {
+    fontSize: 40,
+    color: '#fff',
+  },
   linkPreto: {
-    fontSize: 30,
+    fontSize:40,
     color: '#000',
   },
   linkAzul: {    
-      fontSize: 30,
+      fontSize: 40,
       color: '#00f',
   },
   LinkVermelho: {
-    fontSize: 30,
+    fontSize: 40,
     color: '#f00',
   },
   displayFlex: {
     display: 'flex'
-  },  
+  }, 
+  padding1 : {
+    padding: "1.1%",
+  }
 });
 
 export default Sidebar;
