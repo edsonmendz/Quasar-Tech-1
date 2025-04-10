@@ -16,6 +16,8 @@ const questoes: QuestoesMap[] = [
     { title: "Segurança do Trabalho", tag: "SegurancaDoTrabalho", path: './questoesSegurancaDoTrabalho' },
     { title: "Aproximação e Balizamento de Aeronaves", tag: "AproximaçãoEBalizamentoDeAeronaves", path: './questoesAproximaçãoEBalizamentoDeAeronaves' },
     { title: "Lei Geral de Proteção de Dados", tag: "LGPD", path: './questoesLeiGeralDeProteçãoDeDados' },
+    { title: "Enfermagem", tag: "Enfermagem", path: './questoesEnfermagem' },
+    { title: "Glasgow", tag: "Glasgow", path: './questoesGlasgow' },
     
 ];
 export default questoes;

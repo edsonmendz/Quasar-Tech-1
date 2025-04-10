@@ -17,8 +17,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ maximoPerguntas, isMenuOpen, setIsMenuOpen }) => {
   // Obtém os parâmetros da navegação com a tipagem correta  
-  const questoesOrdenadas = [...questoes].sort((a, b) => a.title.localeCompare(b.title));
-  
+  const questoesOrdenadas = [...questoes].sort((a, b) => a.title.localeCompare(b.title));  
 
   useEffect(() => {
     amplitude.init('bba4fc780cfe4d4ec23cc86d0a1e6f5c');
