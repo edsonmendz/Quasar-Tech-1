@@ -72,13 +72,13 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           <View style={styles.links}>
           
           <TouchableOpacity onPress={() => openURL("mailto:edsonmendesfullstack@gmail.com")}>
-            <Awesome name="envelope" size={40} style={[styles.LinkVermelho, styles.padding1, styles.borda ]} />
+            <Awesome name="envelope" size={40} style={[styles.LinkVermelho, styles.padding1 ]} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => openURL("https://github.com/edsonmendz")}>
-            <Awesome name="github" size={40} color="#fff" style={[styles.linkPreto, styles.padding1, styles.borda ]} />
+            <Awesome name="github" size={40} color="#fff" style={[styles.linkPreto, styles.padding1 ]} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => openURL("https://www.linkedin.com/in/edson-mendes-fullsctack/")}>
-            <Awesome name="linkedin" size={40} color="#fff" style={[styles.linkAzul, styles.padding1, styles.borda ]} />
+            <Awesome name="linkedin" size={40} color="#fff" style={[styles.linkAzul, styles.padding1 ]} />
           </TouchableOpacity>
           </View>
         </View>
