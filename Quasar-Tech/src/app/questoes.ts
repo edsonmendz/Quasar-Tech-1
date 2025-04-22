@@ -18,6 +18,8 @@ const questoes: QuestoesMap[] = [
     { title: "Lei Geral de Proteção de Dados", tag: "LGPD", path: './questoesLeiGeralDeProteçãoDeDados' },
     { title: "Enfermagem", tag: "Enfermagem", path: './questoesEnfermagem' },
     { title: "Glasgow", tag: "Glasgow", path: './questoesGlasgow' },
+    { title: "Administração", tag: "Administracao", path: './questoesAdministracao' },
+    { title: "Instrutor de Trânsito", tag: "InstrutorDeTransito", path: './questoesInstrutorDeTransito' },
     
 ];
 export default questoes;
