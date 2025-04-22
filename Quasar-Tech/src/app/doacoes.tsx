@@ -15,8 +15,8 @@ const Doacoes = () => {
     return text.match(regex) || [];
   };
 
-  const copiarParaClipboard = () => {
-    Clipboard.setString(chaveBitcoin);
+  const copiarParaClipboard = (chave: string) => {
+    Clipboard.setString(chave);
 
     // Mostra a notificação Toast
     Toast.show({
@@ -26,22 +26,25 @@ const Doacoes = () => {
       position: 'bottom', // Posição do Toast na tela
       visibilityTime: 2000, // Duração em milissegundos
     });
+
   };
 
   return (
     <View style={estilos.centralizar}>
       <Text>Gostou do aplicativo?</Text>
       <Text>Faça uma doação:</Text>
-      <Text>5459517@vakinha.com.br</Text>
+      <TouchableOpacity onPress={() => copiarParaClipboard(chavePix)}>
+        <Text>5459517@vakinha.com.br</Text>
+      </TouchableOpacity>
       {/* Imagem do QR Code */}
       <Image
         source={require('./qrcodeBitcoin.png')}  // Caminho relativo para o arquivo da imagem
         style={{ width: 200, height: 200, alignSelf: 'center', marginBottom: 20 }} // Definindo tamanho e estilo da imagem
       />
-      <TouchableOpacity onPress={copiarParaClipboard}>
-      <View style={estilos.chaveContainer}>
+      <TouchableOpacity onPress={() => copiarParaClipboard(chaveBitcoin)}>
+        <View style={estilos.chaveContainer}>
           {splitTextIntoLines(chaveBitcoin, 14).map((line, index) => (
-            <Text key={index} style={estilos.chave}>{line}</Text>            
+            <Text key={index} style={estilos.chave}>{line}</Text>
           ))}
           <Ionicons name="copy-outline" size={24} color="black" />
         </View>

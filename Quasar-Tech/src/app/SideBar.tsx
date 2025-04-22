@@ -85,8 +85,6 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
         <Text> </Text>
         <Text> </Text>
         <Text> </Text>
-        <Text> </Text>
-        <Text> </Text>
         <View>
           <Doacoes />
         </View>
