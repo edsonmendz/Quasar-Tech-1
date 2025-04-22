@@ -7,6 +7,7 @@ import Toast from 'react-native-toast-message';
 
 const Doacoes = () => {
   const chaveBitcoin = "bc1qmqv74vx5ww053dt7fv4csj70ffu8msq0m9a37n";
+  const chavePix = "5459517@vakinha.com.br"
 
   // Função para dividir a chave em linhas de comprimento similar
   const splitTextIntoLines = (text: string, charsPerLine: number) => {
@@ -30,7 +31,8 @@ const Doacoes = () => {
   return (
     <View style={estilos.centralizar}>
       <Text>Gostou do aplicativo?</Text>
-      <Text>Faça uma doação</Text>
+      <Text>Faça uma doação:</Text>
+      <Text>5459517@vakinha.com.br</Text>
       {/* Imagem do QR Code */}
       <Image
         source={require('./qrcodeBitcoin.png')}  // Caminho relativo para o arquivo da imagem
