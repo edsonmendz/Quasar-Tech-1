@@ -34,7 +34,7 @@ const Doacoes = () => {
       <Text>Gostou do aplicativo?</Text>
       <Text>Faça uma doação:</Text>
       <TouchableOpacity onPress={() => copiarParaClipboard(chavePix)}>
-        <Text>5459517@vakinha.com.br</Text>
+        <Text>Minha Chave PIX: 5459517@vakinha.com.br</Text>
       </TouchableOpacity>
       {/* Imagem do QR Code */}
       <Image
