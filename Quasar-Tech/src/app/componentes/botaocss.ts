@@ -4,6 +4,19 @@ export const estilos = StyleSheet.create({
     altura10: {
         height: "14%",
     } as ViewStyle,
+    button: {
+    backgroundColor: "#6200EE", // Cor de fundo do botão
+    paddingVertical: 12,         // Espaçamento vertical
+    paddingHorizontal: 30,       // Espaçamento horizontal
+    borderRadius: 5,            // Bordas arredondadas
+    alignItems: "center",       // Alinha o texto no centro
+    justifyContent: "center",   // Alinha o texto no centro
+  },
+  buttonText: {
+    color: "#fff",              // Cor do texto
+    fontSize: 16,               // Tamanho da fonte
+    fontWeight: "bold",         // Peso da fonte
+  },
     centralizar: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -76,6 +89,12 @@ export const estilos = StyleSheet.create({
     margemEsquerda: {
         marginLeft: "45%"
     },
+    margemTop60: {
+        marginTop: "60%"
+    },
+    margemTop90: {
+        marginTop: "90%"
+    },
     monospace: {
         fontFamily: 'monospace'
     },
@@ -103,6 +122,11 @@ export const estilos = StyleSheet.create({
         borderColor: 'salmon',
         color: 'white',
     } as ViewStyle,
+    respostaErradaNormal: {
+        backgroundColor: 'salmon',
+        borderColor: 'salmon',
+        color: 'white',
+    },
     rodape: {
         position: 'absolute',
         left: "3%",

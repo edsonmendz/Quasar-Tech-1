@@ -23,7 +23,7 @@ type PerguntasRouteProp = RouteProp<RootStackParamList, 'Perguntas'>;
     const [quantidadeAcertos, setQuantidadeAcertos] = useState(0); 
     const [finalizou, setFinalizou] = useState(false);
     const [conferirRespostas, setConferirRespostas] = useState(false);
-    const [questoes, SetQuestoes] = useState([]); 
+    const [questoes, SetQuestoes] = useState([]);
     
 
 
