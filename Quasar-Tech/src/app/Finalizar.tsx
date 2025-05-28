@@ -31,7 +31,6 @@ const Finalizar: React.FC<FinalizarProps> = ({ Concluir, Conferir, conferirRespo
         <View style={styles.container}>
             {!conferirRespostas ? (
                 <View>
-                    <Text>{aleatorio}</Text>
                     <Text style={[styles.textoPergunta, estilos.fonte2em]}>Tem certeza de que deseja finalizar o simulado?</Text>
                     <Button title="Concluir" onPress={Concluir} />
                     <Button title="Voltar" onPress={finalizar} />
