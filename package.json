@@ -1,4 +1,14 @@
 {
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "react-native-fs",
+          "@amplitude/analytics-react-native"
+        ]
+      }
+    }
+  },
   "name": "quasar-tech",
   "version": "1.2.0",
   "main": "expo-router/entry",
