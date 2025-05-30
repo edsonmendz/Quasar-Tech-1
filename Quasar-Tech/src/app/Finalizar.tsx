@@ -1,8 +1,10 @@
 import React from 'react';
+import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Button from './componentes/botao';
 import estilos from './componentes/botaocss';
+import Donate from './donate';
 
 interface FinalizarProps {
     Concluir: () => void;
@@ -15,9 +17,18 @@ interface FinalizarProps {
 
 const Finalizar: React.FC<FinalizarProps> = ({ Concluir, Conferir, conferirRespostas, finalizar, quantidadeAcertos, finalizou }) => {
     const navigation = useNavigation(); // Para navegação no React Native
+    const [donate, setDonate] = useState(1)
+    
+    let aleatorio = Math.floor(Math.random() * 4);
+    if ( aleatorio == 0) {
+        setDonate(aleatorio)
+    }
+    function DonateOff() {
+        setDonate(1)
+    }
 
     return (
-        <View style={styles.container}>            
+        <View style={styles.container}>
             {!conferirRespostas ? (
                 <View>
                     <Text style={[styles.textoPergunta, estilos.fonte2em]}>Tem certeza de que deseja finalizar o simulado?</Text>
@@ -26,13 +37,16 @@ const Finalizar: React.FC<FinalizarProps> = ({ Concluir, Conferir, conferirRespo
                 </View>
             ) : (
                 <View>
-                    <Text style={[styles.resultado, estilos.fonte2em]}>
-                        Você acertou: {quantidadeAcertos} pergunta{quantidadeAcertos !== 1 ? 's' : ''}
-                    </Text>
-                    <Button title="Conferir Respostas" onPress={Conferir} />
-                    <TouchableOpacity >
-                        <Button onPress={() => navigation.goBack()} title='Página inicial' />
-                    </TouchableOpacity>
+                    {!donate ? (<Donate donateOff={DonateOff}></Donate>) :
+                        (<View>
+                            <Text style={[styles.resultado, estilos.fonte2em]}>
+                                Você acertou: {quantidadeAcertos} pergunta{quantidadeAcertos !== 1 ? 's' : ''}
+                            </Text>
+                            <Button title="Conferir Respostas" onPress={Conferir} />
+                            <TouchableOpacity >
+                                <Button onPress={() => navigation.goBack()} title='Página inicial' />
+                            </TouchableOpacity>
+                        </View>)}
                 </View>
             )}
         </View>
