@@ -1,0 +1,80 @@
+{
+  "expo": {
+    "name": "Estudos Específicos",
+    "slug": "estudos-especificos",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/LogoE.png",
+    "scheme": "https",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.edsonmendesfullstack.EstudosEspecificos",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/LogoE.png",
+        "backgroundColor": "#ffffff"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "mailto"
+            },
+            {
+              "scheme": "https",
+              "host": "www.linkedin.com"
+            },
+            {
+              "scheme": "https",
+              "host": "github.com"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "package": "com.edsonmendesfullstack.EstudosEspecificos",
+      "permissions": [
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/LogoE.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/LogoE.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "83f17a4b-8d3a-499c-b10e-85569533383b"
+      }
+    },
+    "owner": "edsonmendesfullstack"
+  }
+}
