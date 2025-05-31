@@ -2,11 +2,11 @@
   "expo": {
     "name": "Estudos Específicos",
     "slug": "estudos-especificos",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "orientation": "portrait",
     "icon": "./assets/images/LogoE.png",
     "scheme": "https",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "newArchEnabled": false,
     "ios": {
       "supportsTablet": true,
@@ -16,7 +16,7 @@
       }
     },
     "android": {
-      "versionCode": 9,
+      "versionCode": 20,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/LogoE.png",
         "backgroundColor": "#ffffff"

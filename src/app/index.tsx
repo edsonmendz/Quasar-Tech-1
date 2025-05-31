@@ -7,6 +7,10 @@ import Loading from "./loading"; // Componente de Loading ou SplashScreen
 import TopBar from './TopBar';
 import SideBar from './SideBar';
 import Home from "./home";
+import { disableFontScaling } from '../../globalConfig';
+
+disableFontScaling();
+
 
 const Stack = createStackNavigator<RootStackParamList>(); // Aqui você passa a tipagem
 
