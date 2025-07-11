@@ -21,6 +21,7 @@ const questoes: QuestoesMap[] = [
     { title: "Administração", tag: "Administracao", path: './questoesAdministracao' },
     { title: "Instrutor de Trânsito", tag: "InstrutorDeTransito", path: './questoesInstrutorDeTransito' },
     { title: "Desenvolvimento de Software Seguro", tag: "DesenvolvimentodeSoftwareSeguro", path: './questoesDesenvolvimentodeSoftwareSeguro' },
+    { title: "Emergência", tag: "emergencia", path: './questoesEmergencia' },
     
 ];
 export default questoes;

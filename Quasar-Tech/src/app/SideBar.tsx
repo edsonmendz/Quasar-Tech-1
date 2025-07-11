@@ -83,7 +83,10 @@ const Sidebar: React.FC<SidebarProps> = ({ closeMenu, setMaximoPerguntas }) => {
           </View>
         </View>
         <Text> </Text>
-        <Text> </Text>
+        <TouchableOpacity onPress={() => openURL("https://play.google.com/store/apps/details?id=com.edsonmendesfullstack.EstudosEspecificos&hl=pt_BR")}>
+            <Text style={styles.padding1}>Confira se há atualizações do APP aqui!</Text>
+          </TouchableOpacity>
+        
         <Text> </Text>
         <View>
           <Doacoes />
