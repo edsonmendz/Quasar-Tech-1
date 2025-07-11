@@ -8,10 +8,13 @@
       "distribution": "internal"
     },
     "production": {
-    "android": {
-      "buildType": "app-bundle"
-    },
-    "autoIncrement": true
-  }
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "autoIncrement": true
+    }
+  },
+  "cli": {
+    "appVersionSource": "local"
   }
 }
